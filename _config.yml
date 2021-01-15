@@ -80,11 +80,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Owen Ozier"
   avatar           : "oo201937a1p3.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : 
-  employer         :
+  bio              : "Associate Professor"
+  location         : "Department of Economics"
+  employer         : "Williams College"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=ZCUpw6oAAAAJ&hl=en"
   email            :
