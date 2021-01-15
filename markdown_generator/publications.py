@@ -97,6 +97,8 @@ for row, item in publications.iterrows():
         
     if len(str(item.excerpt)) > 5:
         md += "\n" + html_escape(item.excerpt) + "\n"
+    if len(str(item.excerpt)) > 100:
+        md += "\n\n<details>\n<summary>Click for abstract</summary>\n" + html_escape(item.excerpt) + "\n</details>\n"
         
     md += "\nRecommended citation: " + item.citation
     
