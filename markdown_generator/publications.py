@@ -104,6 +104,8 @@ for row, item in publications.iterrows():
     if len(str(item.excerpt)) > 6:
         md += "\nLENGTHY.\n"
 
+    md += "\nTHIS is only a test."
+
     md += "\nRecommended citation: " + item.citation
     
     md_filename = os.path.basename(md_filename)
