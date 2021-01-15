@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Owen Ozier"
   avatar           : "oo201937a1p3.png"
-  bio              : "Associate Professor"
-  location         : "Department of Economics"
-  employer         : "Williams College"
+  bio              : "Associate Professor, Department of Economics, Williams College"
+  location         : 
+  employer         : 
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=ZCUpw6oAAAAJ&hl=en"
   email            :
@@ -255,7 +255,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
