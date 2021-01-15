@@ -7,7 +7,5 @@ redirect_from:
   - /resume
 ---
 
-Download CV
-======
 [CV (pdf)](http://owenozier.github.io/files/cv/Ozier-Owen-CV.pdf)
 
