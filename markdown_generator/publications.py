@@ -97,9 +97,13 @@ for row, item in publications.iterrows():
         
     if len(str(item.excerpt)) > 5:
         md += "\n" + html_escape(item.excerpt) + "\n"
+
     if len(str(item.excerpt)) > 100:
-        md += "\n\n<details>\n<summary>Click for abstract</summary>\n" + html_escape(item.excerpt) + "\n</details>\n"
+        md += "\nMore\n<details>\n<summary>Click for abstract</summary>\n" + html_escape(item.excerpt) + "\n</details>\n"
         
+    if len(str(item.excerpt)) > 6:
+        md += "\nLENGTHY.\n"
+
     md += "\nRecommended citation: " + item.citation
     
     md_filename = os.path.basename(md_filename)
