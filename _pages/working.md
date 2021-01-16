@@ -24,7 +24,9 @@ Coverage in [The Telegraph](https://www.telegraph.co.uk/global-health/women-and-
 [Blog at <b>CGD</b>: <i>Doing Well in Life? Thank Your Big Sister</i>](https://www.cgdev.org/blog/doing-well-life-thank-your-big-sister)
 
 
+
 <br>
+
 
 # Gendered Language
 
@@ -48,7 +50,10 @@ Languages use different systems for classifying nouns. Gender languages assign n
 [Blog coverage by Markus Goldstein at <b>Development Impact</b>: <i>Is grammar holding back efficiency and growth?</i>](https://blogs.worldbank.org/impactevaluations/grammar-holding-back-efficiency-and-growth)
 
 
+
 <br>
+
+
 
 # A Firm of One's Own: Experimental Evidence on Credit Constraints and Occupational Choice
 Appears as [World Bank WPS 7977, February 2017](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/428361487270218330/a-firm-of-ones-own-experimental-evidence-on-credit-constraints-and-occupational-choice); 
@@ -82,37 +87,18 @@ This study presents results from a randomized evaluation of two labor market int
 [Trial Registry AEARCTR-0000459](https://www.socialscienceregistry.org/trials/459)
 
 
+
+
 <br>
+
+
 
 # Perils of simulation: parallel streams and the case of stata's rnormal command
 
-November 2012 (World Bank WPS 6278); also available from SSRN.
-Abstract:  Large-scale simulation-based studies rely on at least three properties of pseudorandom number sequences: they behave in many ways like truly random numbers; they can be replicated; and they can be generated in parallel. There has been some divergence, however, between empirical techniques employing random numbers, and the standard battery of tests used to validate them. A random number generator that passes tests for any single stream of random numbers may fail the same tests when it is used to generate multiple streams in parallel. The lack of systematic testing of parallel streams leaves statistical software with important potential vulnerabilities. This paper shows one such vulnerability in Stata's rnormal function that went unnoticed for almost four years, and how to detect it. It then shows practical implications for the use of parallel streams in existing software.
+Appears as [World Bank WPS 6278, November 2012](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/369471468333566549/perils-of-simulation-parallel-streams-and-the-case-of-statas-rnormal-command); 
+(Also available from [SSRN](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2183048).)
 
-HERE BE DRAGONS
 
----
-title: "Does Africa Need a Rotten Kin Theorem? Experimental Evidence from Village Economies"
-collection: publications
-permalink: /publication/2016-01-01-rotten-kin
-excerpt: 'Lab experiment in the field measuring social pressure to share income, in Kenya.'
-date: 2016-01-01
-venue: 'Review of Economic Studies'
-paperurl: 'https://academic.oup.com/restud/article-abstract/83/1/231/2461232'
-citation: 'Jakiela, Pamela, and Owen Ozier. &quot;Does Africa Need a Rotten Kin Theorem? Experimental Evidence from Village Economies.&quot; <i>The Review of Economic Studies</i>, 83, no. 1, (2016): 231–268'
----
 ## Abstract
-This article measures the economic impacts of social pressure to share income with kin and neighbours in rural Kenyan villages. We conduct a lab experiment in which we randomly vary the observability of investment returns to test whether subjects reduce their income in order to keep it hidden. We find that women adopt an investment strategy that conceals the size of their initial endowment in the experiment, though that strategy reduces their expected earnings. This effect is largest among women with relatives attending the experiment. Parameter estimates suggest that women anticipate that observable income will be &quot;taxed&quot; at a rate above 4%; this effective tax rate nearly doubles when kin can observe income directly. At the village level, we find an association between the willingness to forgo expected return to keep income hidden in the laboratory experiment and worse economic outcomes outside the laboratory.
 
-
-## Other versions
-
-[Link to published paper in The Review of Economic Studies](https://academic.oup.com/restud/article-abstract/83/1/231/2461232)
-
-[Pre-print 2015 manuscript (pdf)](http://owenozier.github.io/files/papers/JakielaOzier-VillageEconomies-2015-06-04.pdf)
-
-Earlier version appears as [World Bank WPS 6085, June 2012](http://documents1.worldbank.org/curated/en/164231468331866866/pdf/WPS6085.pdf), also available from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2082776)
-
-[Online Appendix (pdf)](http://owenozier.github.io/files/papers/JakielaOzier-online-appendix-2015-06-03.pdf)
-
-
+Large-scale simulation-based studies rely on at least three properties of pseudorandom number sequences: they behave in many ways like truly random numbers; they can be replicated; and they can be generated in parallel. There has been some divergence, however, between empirical techniques employing random numbers, and the standard battery of tests used to validate them. A random number generator that passes tests for any single stream of random numbers may fail the same tests when it is used to generate multiple streams in parallel. The lack of systematic testing of parallel streams leaves statistical software with important potential vulnerabilities. This paper shows one such vulnerability in Stata's rnormal function that went unnoticed for almost four years, and how to detect it. It then shows practical implications for the use of parallel streams in existing software.
