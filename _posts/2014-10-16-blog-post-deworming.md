@@ -1,5 +1,5 @@
 ---
-title: 'Deworming improves child cognition... eventually.'
+title: 'Deworming improves child cognition... eventually. World Bank - Africa Can.'
 date: 2014-10-16
 permalink: /posts/2014/10/blog-post-deworming/
 tags:
@@ -12,5 +12,5 @@ tags:
 
 With accompanying 7-minute [video presentation](https://vimeo.com/415935928)
 
-Via the [Africa Can](https://blogs.worldbank.org/africacan) blog.
+Via the World Bank [Africa Can](https://blogs.worldbank.org/africacan) blog.
 
