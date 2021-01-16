@@ -1,17 +1,26 @@
 ---
-title: "IJE Commentary"
+title: "Commentary: Fixed effects and risks of miscommunication: a comment on Jullien, Sinclair and Garner"
 collection: publications
 permalink: /publication/2016-12-01-commentary-ije
-excerpt: 'Commentary on Garner et al'
+excerpt: 'Discussing Jullien, Sinclair, and Garner's critiques of Ozier (AEJ:Applied Economics 2018)'
 date: 2016-12-01
 venue: 'International Journal of Epidemiology'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2015). &quot;Paper Title Number 3.&quot; <i>Journal 1</i>. 1(3).'
+paperurl: 'https://academic.oup.com/ije/article/45/6/2156/2970178'
+citation: 'Ozier, Owen. &quot;Commentary: Fixed effects and risks of miscommunication: a comment on Jullien, Sinclair and Garner.&quot; <i>International Journal of Epidemiology</i>, 45, no. 6 (2016): 2156-2158.'
 ---
-This paper is about the number 3. The number 4 is left for future work.
 
-[Download paper here](http://academicpages.github.io/files/paper3.pdf)
+[Link to published commentary in the International Journal of Epidemiology](https://academic.oup.com/ije/article/45/6/2156/2970178)
 
-Recommended citation: Your Name, You. (2015). "Paper Title Number 3." <i>Journal 1</i>. 1(3).
 
-nation_coverage_ozier_201702.pdf
+## Media
+
+[Coverage in the Daily Nation (Kenya)](http://owenozier.github.io/files/media/nation_coverage_ozier_201702.pdf)
+
+
+
+## Other details
+
+Recommended citation: Ozier, Owen. &quot;Commentary: Fixed effects and risks of miscommunication: a comment on Jullien, Sinclair and Garner.&quot; <i>International Journal of Epidemiology</i>, 45, no. 6 (2016): 2156-2158.
+
+DOI:  https://doi.org/10.1093/ije/dyw349
+
