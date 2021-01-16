@@ -82,13 +82,13 @@ analytics:
 author:
   name             : "Owen Ozier"
   avatar           : "oo201937a1p3.png"
-  bio              : "Associate Professor"
-  location         : "Department of Economics"
-  employer         : "Williams College"
-  pubmed           : 
+  bio              : "Associate Professor of Economics at Williams College"
+  location         : 
+  employer         : 
+  pubmed           : #"https://pubmed.ncbi.nlm.nih.gov/?term=owen+ozier"
   googlescholar    : "https://scholar.google.com/citations?user=ZCUpw6oAAAAJ&hl=en"
   email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     : # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
@@ -96,14 +96,14 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "owenozier"
+  github           : #"owenozier"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : 
+  orcid            : # "https://orcid.org/0000-0001-6088-0888"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
