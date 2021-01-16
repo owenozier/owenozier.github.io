@@ -20,7 +20,8 @@ This article measures the economic impacts of social pressure to share income wi
 
 Earlier version appears as [World Bank WPS 6085, June 2012](http://documents1.worldbank.org/curated/en/164231468331866866/pdf/WPS6085.pdf), also available from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2082776)
 
-Online Appendix
+[Online Appendix](http://owenozier.github.io/files/papers/JakielaOzier-online-appendix-2015-06-03.pdf)
+
 Data and analysis files (hosted at RESTUD)
 Data and analysis files (hosted at the World Bank Microdata Catalog)
 Coverage by Nurith Aizenman for NPR's Goats and Soda blog: An Experiment Gives Cash Aid To The Poor. Is That Ethical?
