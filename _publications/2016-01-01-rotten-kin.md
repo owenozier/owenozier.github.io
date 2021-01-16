@@ -35,9 +35,9 @@ Earlier version appears as [World Bank WPS 6085, June 2012](http://documents1.wo
 
 ## Media
 
-[Coverage by Nurith Aizenman for NPR's Goats and Soda blog: <i>An Experiment Gives Cash Aid To The Poor. Is That Ethical?</i>](https://www.npr.org/sections/goatsandsoda/2017/09/13/542261863/cash-aid-changed-this-family-s-life-so-why-is-their-government-skeptical)
+[Coverage by Nurith Aizenman for NPR's <b>Goats and Soda</b> blog: <i>An Experiment Gives Cash Aid To The Poor. Is That Ethical?</i>](https://www.npr.org/sections/goatsandsoda/2017/09/13/542261863/cash-aid-changed-this-family-s-life-so-why-is-their-government-skeptical)
 
-[Blog coverage by Markus Goldstein on Development Impact: <i>Pull him down? How about pull her down...</i>](https://blogs.worldbank.org/impactevaluations/pull-him-down-how-about-pull-her-down)
+[Blog coverage by Markus Goldstein on <b>Development Impact</b>: <i>Pull him down? How about pull her down...</i>](https://blogs.worldbank.org/impactevaluations/pull-him-down-how-about-pull-her-down)
 
 Featured in World Bank Development Research Human Development Quarterly Update 2015 Q3
 
