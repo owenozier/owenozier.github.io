@@ -1,5 +1,5 @@
 ---
-title: "Commentary: Fixed effects and risks of miscommunication: a comment on Jullien, Sinclair and Garner"
+title: 'Commentary: Fixed effects and risks of miscommunication: a comment on Jullien, Sinclair and Garner'
 collection: publications
 permalink: /publication/2016-12-01-commentary-ije
 excerpt: 'Discussing Jullien, Sinclair, and Garner's critiques of Ozier (AEJ:Applied Economics 2018)'
