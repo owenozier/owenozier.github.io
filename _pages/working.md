@@ -23,6 +23,9 @@ Coverage in [The Telegraph](https://www.telegraph.co.uk/global-health/women-and-
 
 [Blog at <b>CGD</b>: <i>Doing Well in Life? Thank Your Big Sister</i>](https://www.cgdev.org/blog/doing-well-life-thank-your-big-sister)
 
+
+<br>
+
 # Gendered Language
 
 Most recent version appears as [CGD Working Paper 500, <i>updated April 2020</i>](https://www.cgdev.org/publication/gendered-language)
@@ -44,6 +47,8 @@ Languages use different systems for classifying nouns. Gender languages assign n
 
 [Blog coverage by Markus Goldstein at <b>Development Impact</b>: <i>Is grammar holding back efficiency and growth?</i>](https://blogs.worldbank.org/impactevaluations/grammar-holding-back-efficiency-and-growth)
 
+
+<br>
 
 # A Firm of One's Own: Experimental Evidence on Credit Constraints and Occupational Choice
 
