@@ -8,7 +8,7 @@ tags:
   - category2
 ---
 
-https://blogs.worldbank.org/africacan/deworming-improves-child-cognition-eventually
+[Deworming improves child cognition... eventually.](https://blogs.worldbank.org/africacan/deworming-improves-child-cognition-eventually)
 
 With accompanying 7-minute [video presentation](https://vimeo.com/415935928)
 
