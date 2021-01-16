@@ -9,9 +9,13 @@ redirect_from:
 
 # Big Sisters
 
-October 2020 (World Bank WPS 9454); Joint with Pamela Jakiela, Heather Knauer, and Lia C. H. Fernald
-Coverage in The Telegraph, NPR Morning Edition, NPR Goats and Soda, TODAY, Yahoo
-Blog at CGD: Doing Well in Life? Thank Your Big Sister
+Appears as [World Bank WPS 9454, October 2020](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/384181603738785852/big-sisters) and as [CGD Working Paper 559, October 2020](https://www.cgdev.org/publication/big-sisters)
+
+Joint with [Pamela Jakiela](https://pamjakiela.com), Heather Knauer, and Lia C. H. Fernald
+
+Coverage in [The Telegraph](https://www.telegraph.co.uk/global-health/women-and-girls/children-older-sisters-developing-countries-do-better-study/amp/), [NPR Morning Edition](https://www.npr.org/2020/12/16/947027225/what-impact-can-having-an-older-sister-have-on-a-childs-development), [NPR Goats and Soda](https://www.npr.org/sections/goatsandsoda/2020/12/17/947566797/the-secret-to-success-having-a-big-sister), [TODAY](https://www.today.com/health/birth-order-are-big-sisters-key-success-t204701), [Yahoo](https://www.yahoo.com/lifestyle/placing-too-much-burden-big-020036343.html)
+
+[Blog at <b>CGD</b>: <i>Doing Well in Life? Thank Your Big Sister</i>](https://www.cgdev.org/blog/doing-well-life-thank-your-big-sister)
 
 # Gendered Language
 
