@@ -13,22 +13,37 @@ Appears as [World Bank WPS 9454, October 2020](https://documents.worldbank.org/e
 
 Joint with [Pamela Jakiela](https://pamjakiela.com), Heather Knauer, and Lia C. H. Fernald
 
+## Abstract
+
+We model household investments in young children when parents and older siblings share caregiving responsibilities and when investments by older siblings contribute to young children’s human capital accumulation. To test the predictions of our model, we estimate the impact of having one older sister (as opposed to one older brother) on early childhood development in a sample of rural Kenyan households with otherwise similar family structures. Older sibling gender is not related to household structure, subsequent birth spacing, or other observable characteristics, so we treat the presence of an older girl (as opposed to an older boy) as plausibly exogenous. Having an older sister rather than an older brother improves younger siblings’ vocabulary and fine motor skills by more than 0.1 standard deviations. Viewed through the lens of our model, the empirical pattern we observe suggests that: (i) older siblings’ investments in young children contribute to their human capital accumulation, and (ii) households perceive lower returns to investing in older girls than in older boys.
+
+## Media
+
 Coverage in [The Telegraph](https://www.telegraph.co.uk/global-health/women-and-girls/children-older-sisters-developing-countries-do-better-study/amp/), [NPR Morning Edition](https://www.npr.org/2020/12/16/947027225/what-impact-can-having-an-older-sister-have-on-a-childs-development), [NPR Goats and Soda](https://www.npr.org/sections/goatsandsoda/2020/12/17/947566797/the-secret-to-success-having-a-big-sister), [TODAY](https://www.today.com/health/birth-order-are-big-sisters-key-success-t204701), [Yahoo](https://www.yahoo.com/lifestyle/placing-too-much-burden-big-020036343.html)
 
 [Blog at <b>CGD</b>: <i>Doing Well in Life? Thank Your Big Sister</i>](https://www.cgdev.org/blog/doing-well-life-thank-your-big-sister)
 
 # Gendered Language
 
-Appears as [World Bank WPS 8464, June 2018](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/405621528167411253/gendered-language); 
+Most recent version appears as [CGD Working Paper 500, <i>updated April 2020</i>](https://www.cgdev.org/publication/gendered-language)
+
+Earlier versions appear as [World Bank WPS 8464, June 2018](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/405621528167411253/gendered-language); 
 (Also available from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3191646).)
 
 Joint with [Pamela Jakiela](https://pamjakiela.com)
+
+## Abstract
+
+Languages use different systems for classifying nouns. Gender languages assign nouns to distinct sex-based categories, masculine and feminine. We construct a new data set, documenting the presence or absence of grammatical gender in more than 4,000 languages which together account for more than 99 percent of the world’s population. We ﬁnd a robust negative cross-country relationship between prevalence of gender languages and women’s labor force participation and educational attainment. We replicate these associations in four countries in sub-Saharan Africa and in India, showing that educational attainment and female labor force participation are lower among those whose native languages use grammatical gender.
+
+## Media
 
 [Coverage in <b>El País</b> (Spain)](https://elpais.com/internacional/2019/03/18/actualidad/1552935977_717400.html)
 
 [October 2018 video of <b>DEC Policy Research Talk</b>: <i>Gendered Language</i>.](https://www.worldbank.org/en/news/video/2018/10/23/policy-research-talk-gendered-language)
 
 [Blog coverage by Markus Goldstein at <b>Development Impact</b>: <i>Is grammar holding back efficiency and growth?</i>](https://blogs.worldbank.org/impactevaluations/grammar-holding-back-efficiency-and-growth)
+
 
 # A Firm of One's Own: Experimental Evidence on Credit Constraints and Occupational Choice
 
