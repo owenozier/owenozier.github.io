@@ -12,12 +12,6 @@ citation: 'Ozier, Owen. &quot;The Impact of Secondary Schooling in Kenya: A Regr
 ## Abstract
 I estimate the impacts of secondary school on human capital, occupational choice, and fertility for young adults in Kenya. Probability of admission to government secondary school rises sharply at a score close to the national mean on a standardized eighth grade examination, permitting me to estimate causal effects of schooling in a regression discontinuity framework. I combine administrative test score data with a survey of young adults to estimate these impacts. My results show that secondary schooling increases human capital. For men, I find a drop in low-skill self-employment; for women, I find a reduction in teen pregnancy.
 
-This paper is about the number 2. The number 3 is left for future work. CHANGED DATE TO 2018!
-
-[Download paper here](http://academicpages.github.io/files/paper2.pdf)
-
-CHANGED DATE TO 2018. Recommended citation: Your Name, You. (2018). "Paper Title Number 2." <i>Journal 1</i>. 1(2).
-
 
 ## Other versions
 
