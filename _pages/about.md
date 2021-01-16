@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an Associate Professor in the [Department of Economics](https://econ.williams.edu/) [at Williams College](https://www.williams.edu/), on leave from the [Development Research Group](http://www.worldbank.org/en/research/brief/researchers) of the World Bank.
+I am an Associate Professor in the [Department of Economics](https://econ.williams.edu/) at [Williams College](https://www.williams.edu/), on leave from the [Development Research Group](http://www.worldbank.org/en/research/brief/researchers) of the World Bank.
 
 <!--- title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites" --->
 
