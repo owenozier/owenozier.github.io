@@ -25,12 +25,13 @@ Earlier version appears as [World Bank WPS 6085, June 2012](http://documents1.wo
 
 ## Data
 
-[Data and analysis files (hosted at RESTUD)](https://academic.oup.com/restud/article-abstract/83/1/231/2461232)
+Data and analysis files:
+[(hosted at RESTUD)](https://academic.oup.com/restud/article-abstract/83/1/231/2461232)
 <!--- link here does not work: http://restud.oxfordjournals.org/content/suppl/2015/07/21/rdv033.DC1/MS17455Supplementary.zip --->
-
-[Data and analysis files (hosted at github)](http://owenozier.github.io/files/data/MS17455Supplementary.zip)
-
-[Data and analysis files (hosted at the World Bank Microdata Catalog)](https://microdata.worldbank.org/index.php/catalog/2667)
+/
+[(hosted at github)](http://owenozier.github.io/files/data/MS17455Supplementary.zip)
+/
+[(hosted at the World Bank Microdata Catalog)](https://microdata.worldbank.org/index.php/catalog/2667)
 
 
 ## Media
