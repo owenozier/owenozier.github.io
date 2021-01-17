@@ -2,11 +2,10 @@
 title: "Randomized control trial as social observatory: A case study"
 collection: publications
 permalink: /publication/2020-03-01-wd-observatory
-excerpt: 'RCTs can spearhead policy change, serve as a laboratory to test economic theories and develop cutting-edge empirical methods, or both.'
+excerpt: ''
 date: 2020-03-01
 venue: 'World Development'
 paperurl: 'https://www.sciencedirect.com/science/article/abs/pii/S0305750X1930436X'
-citation: 'Baird, Sarah, Joan Hamory Hicks, and Owen Ozier. &quot;Randomized control trial as social observatory: A case study.&quot; <i>World Development</i> 127 (2020): 104787.'
 ---
 
 ## Abstract
@@ -22,6 +21,8 @@ the generation of evidence and insights far beyond the near-term RCT result. As 
 social sciences research, this descriptive evidence may not be externally valid in all settings.
 We nevertheless hope the lessons it offers will inspire others to examine these possibilities in their own research.
 
+<!--- excerpt: 'RCTs can spearhead policy change, serve as a laboratory to test economic theories and develop cutting-edge empirical methods, or both.' --->
+<!--- citation: 'Baird, Sarah, Joan Hamory Hicks, and Owen Ozier. &quot;Randomized control trial as social observatory: A case study.&quot; <i>World Development</i> 127 (2020): 104787.' --->
 
 ## Other information
 
