@@ -2,11 +2,10 @@
 title: "Monitoring and evaluating the impact of national school-based deworming in Kenya: study design and baseline results"
 collection: publications
 permalink: /publication/2013-07-04-national-parasitology
-excerpt: 'April 2012 parasitology survey of Kenya'
+excerpt: ''
 date: 2013-07-05
 venue: 'Parasites and Vectors'
 paperurl: 'https://link.springer.com/article/10.1186/1756-3305-6-198'
-citation: 'Mwandawiro, Charles S., Birgit Nikolay, Jimmy H. Kihara, Owen Ozier, Dunstan A. Mukoko, Mariam T. Mwanje, Anna Hakobyan, Rachel L. Pullan, Simon J. Brooker, and Sammy M. Njenga. &quot;Monitoring and evaluating the impact of national school-based deworming in Kenya: study design and baseline results.&quot; <i>Parasites &amp; Vectors</i> 6, no. 1 (2013): 198.'
 ---
 
 ## Abstract
@@ -22,6 +21,11 @@ Overall, 32.4% of children were infected with at least one STH species, with Asc
 
 #### Conclusions
 The current findings are consistent with the known spatial ecology of STH and schistosome infections and provide an important empirical basis on which to evaluate the impact of regular mass treatment through the school system in Kenya.
+
+
+<!--- excerpt: 'April 2012 parasitology survey of Kenya' --->
+<!--- citation: 'Mwandawiro, Charles S., Birgit Nikolay, Jimmy H. Kihara, Owen Ozier, Dunstan A. Mukoko, Mariam T. Mwanje, Anna Hakobyan, Rachel L. Pullan, Simon J. Brooker, and Sammy M. Njenga. &quot;Monitoring and evaluating the impact of national school-based deworming in Kenya: study design and baseline results.&quot; <i>Parasites &amp; Vectors</i> 6, no. 1 (2013): 198.' --->
+
 
 ## Other information
 
