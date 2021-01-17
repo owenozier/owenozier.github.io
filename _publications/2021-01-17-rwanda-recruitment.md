@@ -1,6 +1,7 @@
 ---
 title: "Recruitment, Effort, and Retention Effects of Performance Contracts for Civil Servants: Experimental Evidence from Rwandan Primary Schools"
 collection: publications
+excerpt: ''
 permalink: /publication/2021-01-17-rwanda-recruitment
 date: 2021-01-17
 venue: 'American Economic Review (conditionally accepted)'
