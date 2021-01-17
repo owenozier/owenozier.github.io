@@ -2,16 +2,17 @@
 title: "The Impact of Secondary Schooling in Kenya: A Regression Discontinuity Analysis"
 collection: publications
 permalink: /publication/2018-01-01-impact-secondary
-excerpt: 'Primary school test score cutoff allows estimation of impacts of secondary school in Kenya'
+excerpt: ''
 date: 2018-01-01
 venue: 'Journal of Human Resources'
 paperurl: 'http://jhr.uwpress.org/content/53/1/157.abstract'
-citation: 'Ozier, Owen. &quot;The Impact of Secondary Schooling in Kenya: A Regression Discontinuity Analysis.&quot; <i>Journal of Human Resources</i> 53, no. 1 (2018): 157-188.'
 ---
 
 ## Abstract
 I estimate the impacts of secondary school on human capital, occupational choice, and fertility for young adults in Kenya. Probability of admission to government secondary school rises sharply at a score close to the national mean on a standardized eighth grade examination, permitting me to estimate causal effects of schooling in a regression discontinuity framework. I combine administrative test score data with a survey of young adults to estimate these impacts. My results show that secondary schooling increases human capital. For men, I find a drop in low-skill self-employment; for women, I find a reduction in teen pregnancy.
 
+<!--- excerpt: 'Primary school test score cutoff allows estimation of impacts of secondary school in Kenya' --->
+<!--- citation: 'Ozier, Owen. &quot;The Impact of Secondary Schooling in Kenya: A Regression Discontinuity Analysis.&quot; <i>Journal of Human Resources</i> 53, no. 1 (2018): 157-188.' --->
 
 ## Other versions
 
