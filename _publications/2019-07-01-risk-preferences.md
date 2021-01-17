@@ -2,7 +2,7 @@
 title: "The Impact of Violence on Individual Risk Preferences: Evidence from a Natural Experiment"
 collection: publications
 permalink: /publication/2019-07-01-risk-preferences
-excerpt: 'We estimate the impact of Kenya's post-election violence on individual risk preferences.'
+excerpt: "We estimate the impact of Kenya's post-election violence on individual risk preferences."
 date: 2019-07-01
 venue: 'Review of Economics and Statistics'
 paperurl: 'https://www.mitpressjournals.org/doi/abs/10.1162/rest_a_00763'
