@@ -2,12 +2,12 @@
 title: "The Impact of Violence on Individual Risk Preferences: Evidence from a Natural Experiment"
 collection: publications
 permalink: /publication/2019-07-01-risk-preferences
-excerpt: "We estimate the impact of Kenya's post-election violence on individual risk preferences."
+excerpt: ''
 date: 2019-07-01
 venue: 'Review of Economics and Statistics'
 paperurl: 'https://www.mitpressjournals.org/doi/abs/10.1162/rest_a_00763'
-citation: 'Jakiela, Pamela, and Owen Ozier. &quot;The impact of violence on individual risk preferences: evidence from a natural experiment.&quot; <i>Review of Economics and Statistics</i> 101, no. 3 (2019): 547-559.'
 ---
+
 ## Abstract
 We estimate the impact of Kenya's post-election violence on individual risk preferences.
 Because the crisis interrupted a longitudinal survey of more than five thousand Kenyan youth,
@@ -16,6 +16,11 @@ We measure individual risk preferences using hypothetical lottery choice questio
 showing that they predict migration and entrepreneurship in the cross-section. Our results indicate that
 the post-election violence sharply increased individual risk aversion. Findings remain robust when we use
 an IV estimation strategy that exploits random assignment of respondents to waves of surveying.
+
+<!--- excerpt: "We estimate the impact of Kenya's post-election violence on individual risk preferences." --->
+<!--- citation: 'Jakiela, Pamela, and Owen Ozier. &quot;The impact of violence on individual risk preferences: evidence from a natural experiment.&quot; <i>Review of Economics and Statistics</i> 101, no. 3 (2019): 547-559.' --->
+
+
 
 ## Other versions
 
