@@ -35,6 +35,17 @@ Conditionally accepted based on Stage 1 Pre-Results Review at <i>Journal of Deve
 
 Joint with [Pamela Jakiela](https://pamjakiela.com), Lia C. H. Fernald, and Heather Knauer
 
+## Abstract
+We conduct a cluster-randomized evaluation of an early literacy intervention that
+provided Kenyan parents with illustrated children’s storybooks and modified dialogic reading
+training. Rural communities were randomly assigned to treatment or control. Within treatment
+communities, households were further randomized to receive children’s storybooks in either Luo
+(the mother tongue of all children in the sample) or English (a national language, and the primary
+language of instruction in grade 4 of primary school and beyond). We estimate the impacts of
+treatment on children’s vocabulary and literacy skills. Our design also allows us to document
+household responses to the intervention including behavioral responses by parents and older
+siblings and overall impacts on parental time investments in children.
+
 
 ## Other information
 
