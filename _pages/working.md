@@ -42,7 +42,7 @@ Joint with [Pamela Jakiela](https://pamjakiela.com), Lia C. H. Fernald, and Heat
 
 [Conditionally accepted Registered Report, January 2020 (pdf)](http://owenozier.github.io/files/papers/EMERGE-registered-report-accepted.pdf)
 
-[SIEF Project Page](https://www.worldbank.org/en/programs/sief-trust-fund/brief/kenya-emerge-reading)
+[World Bank SIEF Project Page](https://www.worldbank.org/en/programs/sief-trust-fund/brief/kenya-emerge-reading)
 
 
 
