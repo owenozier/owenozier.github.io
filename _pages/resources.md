@@ -7,7 +7,13 @@ redirect_from:
   - /resume
 ---
 
-These are not really the resources.
+## SurveyCTO GPS distance tool
+These files are courtesy of Saahil Karpe.
 
-[CV (pdf)](http://owenozier.github.io/files/cv/Ozier-Owen-CV.pdf)
+[1. Help file and description](http://owenozier.github.io/files/resource/gpscto/howto-gpsdistance-saahilkarpe-20160617.txt)
+
+[2. Main SurveyCTO Excel file](http://owenozier.github.io/files/resource/gpscto/Dist_Calculator-SaahilK.xlsx)
+
+[3. Example GPS dataset](http://owenozier.github.io/files/resource/gpscto/school_location.csv)
+
 
