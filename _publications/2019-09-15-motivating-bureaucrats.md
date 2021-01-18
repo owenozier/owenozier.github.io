@@ -40,5 +40,5 @@ Earlier version appears as [World Bank WPS 8473, June 2018](https://documents.wo
 
 Recommended citation: Gauri, Varun, Julian C. Jamison, Nina Mazar, and Owen Ozier. &quot;Motivating bureaucrats through social recognition: External validity—A tale of two states.&quot; <i>Organizational Behavior and Human Decision Processes</i> (2019).
 
-DOI: https://doi.org/10.1016/j.obhdp.2019.05.005
+DOI: [https://doi.org/10.1016/j.obhdp.2019.05.005](https://doi.org/10.1016/j.obhdp.2019.05.005)
 
