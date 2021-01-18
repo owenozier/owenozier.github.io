@@ -1,0 +1,15 @@
+SurveyCTO distance calculation guidance
+Saahil Karpe 2016-06-17
+
+This Distance Calculator tool is a chunk of code that can be used as part of a larger SurveyCTO instrument that is being used to carry out data collection in a fixed geographic area. Using a central node (village centre, school, a point on a highway etc.), this tool identifies and displays the distance from the current location to the node. It is useful for instances when data collection needs to be carried out within a certain radius. This version of the instrument for example, was used to canvas 800 meters around a number of target schools (in East Africa) and census each household in therein. 
+
+The tool works best when tablets capture the GPS locations accurately and efficiently, but is also designed to work with data collection using a standalone (traditional) GPS unit. Note that in the latter case, the format in which GPS is being collected is important; and by its very nature is more prone to data entry errors. 
+
+Along with the CTO excel sheet, there is also a CSV. This sheet should contain the data points of all the nodes that are to be approached in a given round of data collection. This is especially useful if teams of enumerators are headed to multiple villages/schools simultaneously. 
+
+Steps to use tool: 
+1. Before data collection begins, capture the GPS point of the central node.
+2. Update the "school_location.csv" document to reflect this GPS information. (Note that if you change the name of this document, to say "village_location.csv", you will need to make sure that this amendment is reflected in cell P10 of the CTO sheet.
+3. Your instrument is ready to run. Upload the .xlsx as the instrument and the csv as a supporting file. 
+
+A note on enumerator training: In the current version of the tool, the enumerator is allowed to over-ride the distance calculated if it is obvious to her/him that there is an error. In order to remove this override, remove line 22 and make the necessary change in the relevance in line 23. 
