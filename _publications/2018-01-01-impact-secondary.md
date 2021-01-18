@@ -41,6 +41,6 @@ Earlier version appears as [World Bank WPS 7384, August 2015](https://documents.
 
 Recommended citation: Ozier, Owen. &quot;The Impact of Secondary Schooling in Kenya: A Regression Discontinuity Analysis.&quot; <i>Journal of Human Resources</i> 53, no. 1 (2018): 157-188.
 
-DOI: https://doi.org/10.3368/jhr.53.1.0915-7407R
+DOI: [https://doi.org/10.3368/jhr.53.1.0915-7407R](https://doi.org/10.3368/jhr.53.1.0915-7407R)
 
 
