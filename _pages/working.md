@@ -28,6 +28,28 @@ Coverage in [The Telegraph](https://www.telegraph.co.uk/global-health/women-and-
 <br>
 
 
+
+# Evaluating the Effects of an Early Literacy Intervention
+
+Conditionally accepted based on Stage 1 Pre-Results Review at <i>Journal of Development Economics</i>
+
+Joint with [Pamela Jakiela](https://pamjakiela.com), Lia C. H. Fernald, and Heather Knauer
+
+
+## Other information
+
+[Trial Registry AEARCTR-0004425](https://www.socialscienceregistry.org/trials/4425)
+
+[Conditionally accepted Registered Report, January 2020 (pdf)](http://owenozier.github.io/files/papers/EMERGE-registered-report-accepted.pdf)
+
+[SIEF Project Page](https://www.worldbank.org/en/programs/sief-trust-fund/brief/kenya-emerge-reading)
+
+
+
+<br>
+
+
+
 # Gendered Language
 
 Most recent version appears as [CGD Working Paper 500, <i>updated April 2020</i>](https://www.cgdev.org/publication/gendered-language)
