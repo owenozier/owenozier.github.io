@@ -1,6 +1,7 @@
 ---
 title: 'Trouble with pre-analysis plans? Try these three weird tricks.'
 date: 2017-07-12
+excerpt: ''
 permalink: /posts/2017/07/blog-post-pre-analysis/
 tags:
   - pre-analysis plans
