@@ -1,5 +1,5 @@
 ---
-title: "Multilingual assessment of early child development: Analyses from repeated observations of children in Kenya"
+title: "Motivating bureaucrats through social recognition: External validity—A tale of two states"
 collection: publications
 permalink: /publication/2019-09-15-motivating-bureaucrats
 excerpt: ''
