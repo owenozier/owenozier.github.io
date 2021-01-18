@@ -33,4 +33,4 @@ The current findings are consistent with the known spatial ecology of STH and sc
 
 Recommended citation: Mwandawiro, Charles S., Birgit Nikolay, Jimmy H. Kihara, Owen Ozier, Dunstan A. Mukoko, Mariam T. Mwanje, Anna Hakobyan, Rachel L. Pullan, Simon J. Brooker, and Sammy M. Njenga. &quot;Monitoring and evaluating the impact of national school-based deworming in Kenya: study design and baseline results.&quot; <i>Parasites &amp; Vectors</i> 6, no. 1 (2013): 198.
 
-DOI: https://doi.org/10.1186/1756-3305-6-198
+DOI: [https://doi.org/10.1186/1756-3305-6-198](https://doi.org/10.1186/1756-3305-6-198)
