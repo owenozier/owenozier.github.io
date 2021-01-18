@@ -53,7 +53,7 @@ Data and analysis files:
 
 Recommended citation: Jakiela, Pamela, and Owen Ozier. &quot;The impact of violence on individual risk preferences: evidence from a natural experiment.&quot; <i>Review of Economics and Statistics</i> 101, no. 3 (2019): 547-559.
   
-DOI: https://doi.org/10.1162/rest_a_00763
+DOI: [https://doi.org/10.1162/rest_a_00763](https://doi.org/10.1162/rest_a_00763)
 
 
 
