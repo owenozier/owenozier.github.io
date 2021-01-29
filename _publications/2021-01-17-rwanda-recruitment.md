@@ -45,7 +45,7 @@ Earlier version appears as [World Bank WPS 9395, September 2020](https://documen
 
 [2019 <b>RISE</b> Blog by Clare Leaver and Lant Pritchett: <i>Should “pay for performance” be used for teachers? (With a plea to pause before you answer)</i>](https://riseprogramme.org/blog/pay-for-performance-plea-pause)
 
-2018 BITSS + Development Impact blog post on the associated pre-analysis plan: Power to the Plan ([Development Impact link](https://blogs.worldbank.org/impactevaluations/power-plan-guest-post-clare-leaver-owen-ozier-pieter-serneels-and-andrew-zeitlin)) ([BITSS link](https://www.bitss.org/power-to-the-plan/))
+2018 <b>BITSS</b> + <b>Development Impact</b> blog post on the associated pre-analysis plan: Power to the Plan ([Development Impact link](https://blogs.worldbank.org/impactevaluations/power-plan-guest-post-clare-leaver-owen-ozier-pieter-serneels-and-andrew-zeitlin)) ([BITSS link](https://www.bitss.org/power-to-the-plan/))
 
 
 ## Policy brief
