@@ -26,7 +26,7 @@ after allowing for selection.
 
 <!--- [Link to published paper in American Economic Journal: Applied Economics](https://www.aeaweb.org/articles?id=10.1257/app.20160183) --->
 
-<!--- [Pre-print 2017 manuscript (pdf)](http://owenozier.github.io/files/papers/ozier_early_deworming_20170718.pdf) --->
+[Pre-print 2021 manuscript (pdf)](http://owenozier.github.io/files/papers/LeaverOzierSerneelsZeitlin-RecruitmentEffortRetentionRwanda-2021-01.pdf) --->
 
 Earlier version appears as [World Bank WPS 9395, September 2020](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/440111599837928395/recruitment-effort-and-retention-effects-of-performance-contracts-for-civil-servants-experimental-evidence-from-rwandan-primary-schools), also available as [IZA discussion paper 13696](http://ftp.iza.org/dp13696.pdf) and from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3695397)
 
