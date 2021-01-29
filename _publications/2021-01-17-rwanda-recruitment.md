@@ -41,6 +41,9 @@ Earlier version appears as [World Bank WPS 9395, September 2020](https://documen
 
 ## Media
 
+[2019 Blog coverage by Markus Goldstein on <b>Development Impact</b>: <i>If you pay teachers based on performance do you get better teachers, or do they work harder?</i>](https://blogs.worldbank.org/impactevaluations/if-you-pay-teachers-based-performance-do-you-get-better-teachers-or-do-they-work)
+
+[2019 <b>RISE</b> Blog by Clare Leaver and Lant Pritchett: <i>Should “pay for performance” be used for teachers? (With a plea to pause before you answer)</i>](https://riseprogramme.org/blog/pay-for-performance-plea-pause)
 
 2018 BITSS + Development Impact blog post on the associated pre-analysis plan: Power to the Plan ([Development Impact link](https://blogs.worldbank.org/impactevaluations/power-plan-guest-post-clare-leaver-owen-ozier-pieter-serneels-and-andrew-zeitlin)) ([BITSS link](https://www.bitss.org/power-to-the-plan/))
 
