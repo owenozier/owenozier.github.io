@@ -45,6 +45,12 @@ Earlier version appears as [World Bank WPS 9395, September 2020](https://documen
 2018 BITSS + Development Impact blog post on the associated pre-analysis plan: Power to the Plan ([Development Impact link](https://blogs.worldbank.org/impactevaluations/power-plan-guest-post-clare-leaver-owen-ozier-pieter-serneels-and-andrew-zeitlin)) ([BITSS link](https://www.bitss.org/power-to-the-plan/))
 
 
+## Policy brief
+
+[January 2021 World Bank <b>Evidence to Policy</b> note: <i>RWANDA: Can performance pay for teachers improve students' learning?</i>](http://documents1.worldbank.org/curated/en/938521611831085051/pdf/Rwanda-Can-Performance-Pay-for-Teachers-Improve-Students-Learning.pdf)
+<!--- (also available in [French](http://documents1.worldbank.org/curated/en/337781468197970455/pdf/99207-FRENCH-BRI-PUBLIC-Box393254B-38-FR-E2P-Kenya2-Read.pdf)) --->
+
+
 ## Other information
 
 [Pre-analysis plan and trial registry: Leaver, Ozier, Serneels, and Zeitlin 2018. "Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools." AEA RCT Registry. https://doi.org/10.1257/rct.2565-5.0](https://doi.org/10.1257/rct.2565-5.0)
