@@ -7,6 +7,14 @@ redirect_from:
   - /resume
 ---
 
+<!--- 2021 --->
+## LaTeX question-rotating counter
+
+[Zip file with pdf output, main .tex file, and several example sub-files for inclusion](http://owenozier.github.io/files/resource/latex/latex-multiquestion-2021-01.zip)
+
+
+
+<!--- 2016 --->
 ## SurveyCTO GPS distance tool
 These files are courtesy of Saahil Karpe.
 
