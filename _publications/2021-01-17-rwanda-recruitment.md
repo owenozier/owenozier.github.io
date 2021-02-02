@@ -28,6 +28,8 @@ after allowing for selection.
 
 [Pre-print 2021 manuscript (pdf)](http://owenozier.github.io/files/papers/LeaverOzierSerneelsZeitlin-RecruitmentEffortRetentionRwanda-2021-01.pdf)
 
+[Pre-print 2021 manuscript, arXiv 2102.00444] (https://arxiv.org/abs/2102.00444)
+
 Earlier version appears as [World Bank WPS 9395, September 2020](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/440111599837928395/recruitment-effort-and-retention-effects-of-performance-contracts-for-civil-servants-experimental-evidence-from-rwandan-primary-schools), also available as [IZA discussion paper 13696](http://ftp.iza.org/dp13696.pdf) and from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3695397)
 
 
