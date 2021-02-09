@@ -23,11 +23,11 @@ I estimate the impacts of secondary school on human capital, occupational choice
 Earlier version appears as [World Bank WPS 7384, August 2015](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/700151467997577920/the-impact-of-secondary-schooling-in-kenya-a-regression-discontinuity-analysis), also available from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2640802)
 
 
-<!---## Data --->
 
-<!---Data and analysis files:--->
-<!---[(hosted at RESTUD)](https://academic.oup.com/restud/article-abstract/83/1/231/2461232)--->
-<!--- / [(hosted at github)](http://owenozier.github.io/files/data/MS17455Supplementary.zip) --->
+## Data
+
+Data and analysis files:
+[(hosted at github)](http://owenozier.github.io/files/data/ozier2018JHRv1.zip)
 
 
 ## Media
