@@ -30,6 +30,8 @@ after allowing for selection.
 
 [Pre-print 2021 manuscript, arXiv 2102.00444](https://arxiv.org/abs/2102.00444)
 
+[Pre-print 2021 manuscript, Williams Economics Working Paper Series](https://doi.org/10.36934/wecon:2021-04)
+
 Earlier version appears as [World Bank WPS 9395, September 2020](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/440111599837928395/recruitment-effort-and-retention-effects-of-performance-contracts-for-civil-servants-experimental-evidence-from-rwandan-primary-schools), also available as [IZA discussion paper 13696](http://ftp.iza.org/dp13696.pdf) and from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3695397)
 
 
@@ -58,10 +60,13 @@ Earlier version appears as [World Bank WPS 9395, September 2020](https://documen
 
 ## Other information
 
+JEL codes:  C93, I21, J45, M52, O15
+
 [Pre-analysis plan and trial registry: Leaver, Ozier, Serneels, and Zeitlin 2018. "Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools." AEA RCT Registry. https://doi.org/10.1257/rct.2565-5.0](https://doi.org/10.1257/rct.2565-5.0)
 
 Recommended citation: Leaver, Clare, Owen Ozier, Pieter Serneels, and Andrew Zeitlin. Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools. Mimeo. Washington: World Bank, 2020.
-  
+
+
 <!--- DOI: https://doi.org/10.1257/app.20160183 --->
 
 
