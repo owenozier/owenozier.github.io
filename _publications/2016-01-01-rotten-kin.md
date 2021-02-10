@@ -48,6 +48,8 @@ Featured in World Bank Development Research Human Development Quarterly Update 2
 
 ## Other details
 
+JEL codes: C91, C93, D81, O12
+
 Recommended citation: Jakiela, Pamela, and Owen Ozier. &quot;Does Africa Need a Rotten Kin Theorem? Experimental Evidence from Village Economies.&quot; <i>The Review of Economic Studies</i> 83, no. 1, (2016): 231–268.
 
 DOI: [https://doi.org/10.1093/restud/rdv033](https://doi.org/10.1093/restud/rdv033)
