@@ -39,6 +39,8 @@ Data and analysis files:
 
 ## Other details
 
+JEL codes:  I21, I28, J00, O12, O15
+
 Recommended citation: Ozier, Owen. &quot;The Impact of Secondary Schooling in Kenya: A Regression Discontinuity Analysis.&quot; <i>Journal of Human Resources</i> 53, no. 1 (2018): 157-188.
 
 DOI: [https://doi.org/10.3368/jhr.53.1.0915-7407R](https://doi.org/10.3368/jhr.53.1.0915-7407R)
