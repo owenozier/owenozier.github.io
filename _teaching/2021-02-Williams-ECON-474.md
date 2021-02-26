@@ -8,5 +8,5 @@ date: 2020-02-01
 location: "Williamstown, MA, USA"
 ---
 
-Link to Williams-internal course website: https://glow.williams.edu/courses/3117312/
+Link to Williams-internal course website: [https://glow.williams.edu/courses/3117312/](https://glow.williams.edu/courses/3117312/)
 
