@@ -1,0 +1,19 @@
+---
+title: 'Early Childhood Interventions Conference'
+date: 2012-05-03
+excerpt: ''
+permalink: /posts/2012/05/blog-post-ecd-conference/
+tags:
+  - ecd
+  - child development
+  - heckman
+  - psid
+  - incap
+  - guatemala
+  - colombia
+  - jamaica
+---
+
+[Early Childhood Interventions Conference](https://blogs.worldbank.org/impactevaluations/early-childhood-interventions-conference)
+Post on the World Bank [Development Impact](https://blogs.worldbank.org/impactevaluations/) blog.
+
