@@ -3,7 +3,7 @@ title: "BGSE Development: Randomized Controlled Trials"
 collection: teaching
 type: "Summer school course"
 permalink: /teaching/2019-BGSE
-venue: "University of Maryland"
+venue: "Barcelona Graduate School of Economics"
 date: 2019-07-01
 location: "Barcelona, Spain"
 ---
