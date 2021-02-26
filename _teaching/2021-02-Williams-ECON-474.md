@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2021S-ECON-474
 venue: "Williams College"
-date: 2021-02-01
+date: 2021-02-02
 location: "Williamstown, MA, USA"
 ---
 
