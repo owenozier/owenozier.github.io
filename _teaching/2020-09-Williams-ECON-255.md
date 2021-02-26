@@ -1,5 +1,5 @@
 ---
-title: "ECON-255"
+title: "ECON-255 Econometrics"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2020F-ECON-255
