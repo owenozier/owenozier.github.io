@@ -8,5 +8,5 @@ date: 2020-09-01
 location: "Williamstown, MA, USA"
 ---
 
-Link to Williams-internal course website: https://glow.williams.edu/courses/3010544
+Link to Williams-internal course website: [https://glow.williams.edu/courses/3010544](https://glow.williams.edu/courses/3010544)
 
