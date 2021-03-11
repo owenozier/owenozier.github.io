@@ -4,8 +4,8 @@ collection: publications
 excerpt: ''
 permalink: /publication/2021-01-17-rwanda-recruitment
 date: 2021-01-17
-venue: 'American Economic Review (conditionally accepted)'
-paperurl: 'http://ftp.iza.org/dp13696.pdf'
+venue: 'American Economic Review (forthcoming)'
+paperurl: 'https://www.aeaweb.org/articles?id=10.1257/aer.20191972'
 ---
 ## Abstract
 This paper reports on a two-tiered experiment designed to separately identify
@@ -24,7 +24,7 @@ after allowing for selection.
 <!--- excerpt: 'This paper reports on a two-tiered experiment designed to separately identify the selection and effort margins of pay-for-performance (P4P).' --->
 <!--- citation: 'Leaver, Clare, Owen Ozier, Pieter Serneels, and Andrew Zeitlin. Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools. Mimeo. Washington: World Bank, 2020.' --->
 
-<!--- [Link to published paper in American Economic Journal: Applied Economics](https://www.aeaweb.org/articles?id=10.1257/app.20160183) --->
+[Link to forthcoming paper in the American Economic Review](https://www.aeaweb.org/articles?id=10.1257/aer.20191972)
 
 [Pre-print 2021 manuscript (pdf)](http://owenozier.github.io/files/papers/LeaverOzierSerneelsZeitlin-RecruitmentEffortRetentionRwanda-2021-01.pdf)
 
@@ -36,6 +36,8 @@ Earlier version appears as [World Bank WPS 9395, September 2020](https://documen
 
 
 ## Data
+
+Data and analysis files hosted at ICPSR
 
 <!--- Data and analysis files: [(hosted at ICPSR)](http://doi.org/10.3886/E113689V1) --->
 <!---/ [(hosted at github)](http://owenozier.github.io/files/data/MS17455Supplementary.zip) --->
