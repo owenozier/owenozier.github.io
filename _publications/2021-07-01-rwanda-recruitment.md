@@ -66,7 +66,7 @@ JEL codes:  C93, I21, J45, M52, O15
 
 [Pre-analysis plan and trial registry: Leaver, Ozier, Serneels, and Zeitlin 2018. "Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools." AEA RCT Registry. https://doi.org/10.1257/rct.2565-5.0](https://doi.org/10.1257/rct.2565-5.0)
 
-Recommended citation: Leaver, Clare, Owen Ozier, Pieter Serneels, and Andrew Zeitlin. Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools. <i>American Economic Review</i> 111, no. 7 (2021): 2213-46.
+Recommended citation: Leaver, Clare, Owen Ozier, Pieter Serneels, and Andrew Zeitlin. &quot;Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools.&quot; <i>American Economic Review</i> 111, no. 7 (2021): 2213-46.
 
 
 <!--- DOI: https://doi.org/10.1257/app.20160183 --->
