@@ -2,9 +2,9 @@
 title: "Recruitment, Effort, and Retention Effects of Performance Contracts for Civil Servants: Experimental Evidence from Rwandan Primary Schools"
 collection: publications
 excerpt: ''
-permalink: /publication/2021-03-10-rwanda-recruitment
-date: 2021-03-10
-venue: 'American Economic Review (forthcoming)'
+permalink: /publication/2021-07-01-rwanda-recruitment
+date: 2021-07-01
+venue: 'American Economic Review'
 paperurl: 'https://www.aeaweb.org/articles?id=10.1257/aer.20191972'
 ---
 ## Abstract
@@ -24,7 +24,7 @@ after allowing for selection.
 <!--- excerpt: 'This paper reports on a two-tiered experiment designed to separately identify the selection and effort margins of pay-for-performance (P4P).' --->
 <!--- citation: 'Leaver, Clare, Owen Ozier, Pieter Serneels, and Andrew Zeitlin. Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools. Mimeo. Washington: World Bank, 2020.' --->
 
-[Link to forthcoming paper in the American Economic Review](https://www.aeaweb.org/articles?id=10.1257/aer.20191972)
+[Link to published paper in the American Economic Review](https://www.aeaweb.org/articles?id=10.1257/aer.20191972)
 
 [Pre-print 2021 manuscript (pdf)](http://owenozier.github.io/files/papers/LeaverOzierSerneelsZeitlin-RecruitmentEffortRetentionRwanda-2021-01.pdf)
 
@@ -66,7 +66,7 @@ JEL codes:  C93, I21, J45, M52, O15
 
 [Pre-analysis plan and trial registry: Leaver, Ozier, Serneels, and Zeitlin 2018. "Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools." AEA RCT Registry. https://doi.org/10.1257/rct.2565-5.0](https://doi.org/10.1257/rct.2565-5.0)
 
-Recommended citation: Leaver, Clare, Owen Ozier, Pieter Serneels, and Andrew Zeitlin. Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools. Mimeo. Washington: World Bank, 2020.
+Recommended citation: Leaver, Clare, Owen Ozier, Pieter Serneels, and Andrew Zeitlin. Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools. <i>American Economic Review</i> 111, no. 7 (2021): 2213-46.
 
 
 <!--- DOI: https://doi.org/10.1257/app.20160183 --->
