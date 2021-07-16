@@ -5,8 +5,8 @@ excerpt: ''
 permalink: /posts/2014/10/blog-post-deworming/
 tags:
   - deworming
-  - category1
-  - category2
+  - education
+  - Kenya
 ---
 
 [Deworming improves child cognition... eventually.](https://blogs.worldbank.org/africacan/deworming-improves-child-cognition-eventually)
