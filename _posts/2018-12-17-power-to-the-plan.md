@@ -17,4 +17,4 @@ Cross-posted on the [UC Berkeley BITSS blog](https://www.bitss.org/power-to-the-
 
 Underlying [Trial Registry AEARCTR-0002565](https://www.socialscienceregistry.org/trials/2565)
 
-Other details about the study of [teacher recruitment, effort, and retention in Rwanda](https://owenozier.github.io/publication/2021-01-17-rwanda-recruitment)
+Other details about the study of [teacher recruitment, effort, and retention in Rwanda](https://owenozier.github.io/publication/2021-07-01-rwanda-recruitment)
