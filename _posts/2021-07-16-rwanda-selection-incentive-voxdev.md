@@ -4,7 +4,8 @@ date: 2021-07-16
 excerpt: ''
 permalink: /posts/2021/07/blog-post-selection-incentive-rwanda/
 tags:
-  - rwanda
+  - Rwanda
+  - education
   - pay-for-performance
 ---
 
