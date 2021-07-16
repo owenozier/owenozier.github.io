@@ -10,6 +10,7 @@ tags:
   - urban
   - entrepreneurship
   - employment
+  - Kenya
 ---
 
 [Microfranchising in Nairobi hits the BBC.](https://blogs.worldbank.org/allaboutfinance/microfranchising-in-nairobi-hits-the-bbc)
