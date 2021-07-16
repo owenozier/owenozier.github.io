@@ -37,12 +37,10 @@ Earlier version appears as [World Bank WPS 9395, September 2020](https://documen
 
 ## Data
 
-Data and analysis files hosted at ICPSR
+Data and analysis files: [(hosted at ICPSR)](https://doi.org/10.3886/E121941V1)
 
-<!--- Data and analysis files: [(hosted at ICPSR)](http://doi.org/10.3886/E113689V1) --->
-<!---/ [(hosted at github)](http://owenozier.github.io/files/data/MS17455Supplementary.zip) --->
-<!--- / [(hosted at the World Bank Microdata Catalog)](https://microdata.worldbank.org/index.php/catalog/2667) --->
-<!--- RESTUD old data link does not work: http://restud.oxfordjournals.org/content/suppl/2015/07/21/rdv033.DC1/MS17455Supplementary.zip --->
+<!--- DIRECT URL: https://www.openicpsr.org/openicpsr/project/121941/version/V1/view --->
+<!---/ [(hosted at github)](http://owenozier.github.io/files/data/FILENAMEHERE.zip) --->
 
 
 ## Media
