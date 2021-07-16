@@ -47,6 +47,8 @@ Data and analysis files hosted at ICPSR
 
 ## Media
 
+[2021 <b>VoxDev</b> blog post on paper and new related work: Selection and incentive effects of teacher performance contracts in Rwanda](https://voxdev.org/topic/health-education/selection-and-incentive-effects-teacher-performance-contracts-rwanda)
+
 [2019 Blog coverage by Markus Goldstein on <b>Development Impact</b>: <i>If you pay teachers based on performance do you get better teachers, or do they work harder?</i>](https://blogs.worldbank.org/impactevaluations/if-you-pay-teachers-based-performance-do-you-get-better-teachers-or-do-they-work)
 
 [2019 <b>RISE</b> Blog by Clare Leaver and Lant Pritchett: <i>Should “pay for performance” be used for teachers? (With a plea to pause before you answer)</i>](https://riseprogramme.org/blog/pay-for-performance-plea-pause)
