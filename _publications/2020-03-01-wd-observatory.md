@@ -28,6 +28,8 @@ We nevertheless hope the lessons it offers will inspire others to examine these 
 
 [Link to published paper in World Development](https://www.sciencedirect.com/science/article/abs/pii/S0305750X1930436X)
 
+[Pre-print manuscript (pdf)](http://owenozier.github.io/files/papers/BairdHamoryHicksOzier-RandomizedTrials--unformatted-nov2019-final.pdf)
+
 Recommended citation: Baird, Sarah, Joan Hamory Hicks, and Owen Ozier. &quot;Randomized control trial as social observatory: A case study.&quot; <i>World Development</i> 127 (2020): 104787.
 
 DOI: [https://doi.org/10.1016/j.worlddev.2019.104787](https://doi.org/10.1016/j.worlddev.2019.104787)
