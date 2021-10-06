@@ -6,6 +6,7 @@ permalink: /teaching/2020-2021-memes
 venue: "Williams College"
 date: 2021-06-01
 ---
+Memes and Poems by Williams College ECON-255 students, Academic Year 2020-2021
 
 # Econometrics Memes and Poems, 2020-2021
 
