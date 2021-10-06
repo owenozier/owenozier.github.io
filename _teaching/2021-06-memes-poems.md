@@ -1,6 +1,7 @@
 ---
 title: "Econometrics Memes and Poems, 2020-2021"
 collection: teaching
+type: "Non-credit assignments"
 permalink: /teaching/2020-2021-memes
 venue: "Williams College"
 date: 2021-06-01
