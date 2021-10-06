@@ -1,3 +1,12 @@
+---
+title: "Econometrics Memes and Poems, 2020-2021"
+collection: teaching
+type: "Graduate course"
+permalink: /teaching/2020-2021-memes
+venue: "Williams College"
+date: 2021-06-01
+---
+
 # Econometrics Memes and Poems, 2020-2021
 
 ## Meme by Margot Berman ‘22
