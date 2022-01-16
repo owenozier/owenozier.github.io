@@ -7,6 +7,42 @@ redirect_from:
   - /resume
 ---
 
+
+
+# Gendered Language
+
+Most recent version appears as [Williams Economics Working Paper 2021-13, July 2021](https://doi.org/10.36934/wecon:2021-13)
+
+Earlier versions appear as [CGD Working Paper 500, <i>updated April 2020</i>](https://www.cgdev.org/publication/gendered-language)
+ and [World Bank WPS 8464, June 2018](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/405621528167411253/gendered-language); 
+(Also available from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3191646).)
+
+Joint with [Pamela Jakiela](https://pamjakiela.com)
+
+## Abstract
+
+Languages use different systems for classifying nouns. Gender languages assign nouns
+to distinct sex-based categories, masculine and feminine. We construct a new data set,
+documenting the presence or absence of grammatical gender in more than 4,000 languages
+which together account for more than 99% of the world's population. We find a
+robust negative relationship between prevalence of gender languages and women's labor
+force participation and educational attainment both across and within countries. We
+also demonstrate that grammatical gender is associated with both weaker legal support
+for women's equality and reduced female bargaining power within the household.
+
+## Media
+
+[Coverage in <b>El País</b> (Spain)](https://elpais.com/internacional/2019/03/18/actualidad/1552935977_717400.html)
+
+[October 2018 video of <b>DEC Policy Research Talk</b>: <i>Gendered Language</i>.](https://www.worldbank.org/en/news/video/2018/10/23/policy-research-talk-gendered-language)
+
+[Blog coverage by Markus Goldstein at <b>Development Impact</b>: <i>Is grammar holding back efficiency and growth?</i>](https://blogs.worldbank.org/impactevaluations/grammar-holding-back-efficiency-and-growth)
+
+
+
+<br>
+
+
 # Big Sisters
 
 Appears as [World Bank WPS 9454, October 2020](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/384181603738785852/big-sisters) and as [CGD Working Paper 559, October 2020](https://www.cgdev.org/publication/big-sisters)
@@ -60,31 +96,6 @@ siblings and overall impacts on parental time investments in children.
 <br>
 
 
-
-# Gendered Language
-
-Most recent version appears as [CGD Working Paper 500, <i>updated April 2020</i>](https://www.cgdev.org/publication/gendered-language)
-
-Earlier versions appear as [World Bank WPS 8464, June 2018](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/405621528167411253/gendered-language); 
-(Also available from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3191646).)
-
-Joint with [Pamela Jakiela](https://pamjakiela.com)
-
-## Abstract
-
-Languages use different systems for classifying nouns. Gender languages assign nouns to distinct sex-based categories, masculine and feminine. We construct a new data set, documenting the presence or absence of grammatical gender in more than 4,000 languages which together account for more than 99 percent of the world’s population. We ﬁnd a robust negative cross-country relationship between prevalence of gender languages and women’s labor force participation and educational attainment. We replicate these associations in four countries in sub-Saharan Africa and in India, showing that educational attainment and female labor force participation are lower among those whose native languages use grammatical gender.
-
-## Media
-
-[Coverage in <b>El País</b> (Spain)](https://elpais.com/internacional/2019/03/18/actualidad/1552935977_717400.html)
-
-[October 2018 video of <b>DEC Policy Research Talk</b>: <i>Gendered Language</i>.](https://www.worldbank.org/en/news/video/2018/10/23/policy-research-talk-gendered-language)
-
-[Blog coverage by Markus Goldstein at <b>Development Impact</b>: <i>Is grammar holding back efficiency and growth?</i>](https://blogs.worldbank.org/impactevaluations/grammar-holding-back-efficiency-and-growth)
-
-
-
-<br>
 
 
 
