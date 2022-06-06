@@ -7,6 +7,30 @@ redirect_from:
   - /resume
 ---
 
+# Can Education be Standardized? Evidence from Kenya
+
+Most recent version appears as [Becker Friedman Institute Working Paper 2022-168, June 2022]([https://doi.org/10.36934/wecon:2021-13](https://bfi.uchicago.edu/working-paper/2022-68/))
+
+Joint with Guthrie Gray-Lobe, [Anthony Keats](http://akeats.faculty.wesleyan.edu/), [Michael Kremer](https://michaelkremer.economics.uchicago.edu/), and [Isaac Mbiti](https://sites.google.com/site/isaacmbiti/)
+
+## Abstract
+We examine the impact of enrolling in schools that employ a highly-standardized approach to
+education, using random variation from a large nationwide scholarship program. Bridge International
+Academies not only delivers highly detailed lesson guides to teachers using tablet
+computers, it also standardizes systems for daily teacher monitoring and feedback, school construction,
+and financial management. At the time of the study, Bridge operated over 400 private
+schools serving more than 100,000 pupils. It hired teachers with less formal education and experience
+than public school teachers, paid them less, and had more working hours per week.
+Enrolling at Bridge for two years increased test scores by 0.89 additional equivalent years of
+schooling (EYS) for primary school pupils and by 1.48 EYS for pre-primary pupils. These effects
+are in the 99th percentile of effects found for at-scale programs studied in a recent survey.
+Enrolling at Bridge reduced both dispersion in test scores and grade repetition. Test score
+results do not seem to be driven by rote memorization or by income effects of the scholarship.
+
+
+## Other information
+
+[Trial Registry AEARCTR-0005382](https://www.socialscienceregistry.org/trials/5382)
 
 
 # Gendered Language
