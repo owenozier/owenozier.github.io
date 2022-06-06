@@ -13,7 +13,7 @@ Most recent version appears as [Becker Friedman Institute Working Paper 2022-168
 
 Also available [as pdf online here](https://owenozier.github.io/files/papers/Can%20education%20be%20standardized%202022.06.05.pdf)
 
-Joint with Guthrie Gray-Lobe, [Anthony Keats](http://akeats.faculty.wesleyan.edu/), [Michael Kremer](https://michaelkremer.economics.uchicago.edu/), and [Isaac Mbiti](https://sites.google.com/site/isaacmbiti/)
+Joint with [Guthrie Gray-Lobe](https://bfi.uchicago.edu/scholar/guthrie-gray-lobe/), [Anthony Keats](http://akeats.faculty.wesleyan.edu/), [Michael Kremer](https://michaelkremer.economics.uchicago.edu/), and [Isaac Mbiti](https://sites.google.com/site/isaacmbiti/)
 
 ## Abstract
 We examine the impact of enrolling in schools that employ a highly-standardized approach to
