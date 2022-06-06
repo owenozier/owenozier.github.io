@@ -9,7 +9,7 @@ redirect_from:
 
 # Can Education be Standardized? Evidence from Kenya
 
-Most recent version appears as [Becker Friedman Institute Working Paper 2022-168, June 2022]([https://doi.org/10.36934/wecon:2021-13](https://bfi.uchicago.edu/working-paper/2022-68/))
+Most recent version appears as [Becker Friedman Institute Working Paper 2022-168, June 2022](https://bfi.uchicago.edu/working-paper/2022-68/)
 
 Also available [as pdf online here](https://owenozier.github.io/files/papers/Can%20education%20be%20standardized%202022.06.05.pdf)
 
