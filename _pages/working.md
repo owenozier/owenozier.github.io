@@ -11,7 +11,7 @@ redirect_from:
 
 Most recent version appears as [Becker Friedman Institute Working Paper 2022-168, June 2022](https://bfi.uchicago.edu/working-paper/2022-68/)
 
-Also available [as pdf online here](https://owenozier.github.io/files/papers/Can%20education%20be%20standardized%202022.06.05.pdf)
+Also available [as pdf online here](https://owenozier.github.io/files/papers/Can%20education%20be%20standardized%202022.06.05.pdf); online appendix [available here](https://bfi.uchicago.edu/wp-content/uploads/2022/06/Online-Appendix-Can-education-be-standardized-2022.06.06.pdf).
 
 Joint with [Guthrie Gray-Lobe](https://bfi.uchicago.edu/scholar/guthrie-gray-lobe/), [Anthony Keats](http://akeats.faculty.wesleyan.edu/), [Michael Kremer](https://michaelkremer.economics.uchicago.edu/), and [Isaac Mbiti](https://sites.google.com/site/isaacmbiti/)
 
