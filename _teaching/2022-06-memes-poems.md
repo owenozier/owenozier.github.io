@@ -23,14 +23,7 @@ Your growth diverges from B's; <br/>
 that's why you're unique. <br/>
 
 
-## Anonymous 255 Student haiku
-
-econometrics, <br/>
-stats, and the real world, <br/>
-plus stata breaking <br/>
-
-
-## Anonymous 255 Student meme
+## Anonymous 255 Student meme 1
 
 <img src="https://owenozier.github.io/images/memes/2021-2022-meme-a.png"  width=500 alt="Data requirements of diff-in-diffs">
 
@@ -46,3 +39,17 @@ Through Stata, we learned and began our procession, <br/>
 The strength to topple untrue fact, <br/>
 Our tool, the linear regression, <br/>
 And a commitment to truth as our pact. <br/>
+
+
+## Anonymous 255 Student meme 2
+
+<img src="https://owenozier.github.io/images/memes/2021-2022-meme-b.png"  width=500 alt="t statistic, reference a table, or just find and ask Student">
+
+
+## Anonymous 255 Student haiku
+
+econometrics, <br/>
+stats, and the real world, <br/>
+plus stata breaking <br/>
+
+
