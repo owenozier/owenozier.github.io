@@ -23,6 +23,13 @@ Your growth diverges from B's; <br/>
 that's why you're unique. <br/>
 
 
+
+
+## Anonymous meme
+
+<img src="https://owenozier.github.io/images/memes/2021-2022-meme-a.png"  width=500 alt="Data requirements of diff-in-diffs">
+
+
 ## Anonymous poem
 <i>Metrics and Meter</i>
 
