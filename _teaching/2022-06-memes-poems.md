@@ -26,7 +26,7 @@ And if they are useful, they will produce an R squared that is more than suffici
 
 ## Meme by Zola Baird '23
 
-<img src="https://owenozier.github.io/images/memes/2021-2022-meme-baird.png"  width=500 alt="Adjusted R-squared">
+<img src="https://owenozier.github.io/images/memes/2021-2022-meme-baird.jpg"  width=500 alt="Adjusted R-squared">
 
 
 ## Haiku by Lily Levin ‘23
