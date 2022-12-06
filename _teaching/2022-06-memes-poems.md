@@ -22,3 +22,15 @@ We should embrace change. <br/>
 Your growth diverges from B's; <br/>
 that's why you're unique. <br/>
 
+
+## Anonymous poem
+<i>Metrics and Meter</i>
+
+After time spent researching and time spent pondering, <br/>
+Our dataset stood clean, free of any error, <br/>
+A testament to our intellectual wandering, <br/>
+A beacon against ignorance, that statistical terror. <br/>
+Through Stata, we learned and began our procession, <br/>
+The strength to topple untrue fact, <br/>
+Our tool, the linear regression, <br/>
+And a commitment to truth as our pact. <br/>
