@@ -1,3 +1,5 @@
+## Asking ChatGPT about setting the seed
+
 <img src="https://owenozier.github.io/images/chatgpt/chatgpt-seed-001.png"  width=1187 alt="seed, part 1">
 
 <img src="https://owenozier.github.io/images/chatgpt/chatgpt-seed-002.png"  width=1187 alt="seed, part 2">
