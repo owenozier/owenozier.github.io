@@ -30,6 +30,13 @@ Enrolling at Bridge reduced both dispersion in test scores and grade repetition.
 results do not seem to be driven by rote memorization or by income effects of the scholarship.
 
 
+
+## Media
+
+[New York Times](https://www.nytimes.com/2022/06/13/opinion/newglobe-education-test-scores.html)
+
+[The Economist](https://www.economist.com/middle-east-and-africa/2022/06/09/why-pupils-at-scripted-schools-get-higher-marks)
+
 ## Other information
 
 [Trial Registry AEARCTR-0005382](https://www.socialscienceregistry.org/trials/5382)
