@@ -35,7 +35,9 @@ results do not seem to be driven by rote memorization or by income effects of th
 
 [New York Times](https://www.nytimes.com/2022/06/13/opinion/newglobe-education-test-scores.html)
 
-[The Economist](https://www.economist.com/middle-east-and-africa/2022/06/09/why-pupils-at-scripted-schools-get-higher-marks)
+[The Economist (2022)](https://www.economist.com/middle-east-and-africa/2022/06/09/why-pupils-at-scripted-schools-get-higher-marks)
+
+[The Economist (2023)](https://www.economist.com/international/2023/01/26/most-children-in-poor-countries-are-being-failed-by-their-schools)
 
 ## Other information
 
