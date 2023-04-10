@@ -32,4 +32,4 @@ reg testscore cmsch age dtm, vce(cluster cid)
 estimates store m6
 
 * put everything in the table, annotate significance levels, save
-esttab m1 m2 m3 m4 m5 m6 using testscore-output-stata.html, se(%5.3f) b(%5.3f) replace r2 label nomtitles star(* 0.10 ** 0.05 *** 0.01) 
+esttab m1 m2 m3 m4 m5 m6 using testscore-output-stata.html, se(%5.3f) b(%5.3f) replace r2 label nomtitles star(* 0.10 ** 0.05 *** 0.01) addnote("Columns 4-6 cluster standard errors at the community level.")

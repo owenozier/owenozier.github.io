@@ -3,6 +3,7 @@
 # based on example by Nick Huntington-Klein
 
 # packages that may need to be installed
+
 packagestocheck <- c('modelsummary','fixest','readstata13')
 
 # install if packages
@@ -45,9 +46,9 @@ cm <- c('cmsch'    = 'Parent schooling (avg)',
 
 # put everything in the table, annotate significance levels, save
 msummary(list(m1, m2, m3, m4, m5, m6),
-         stars=c('*' = .1, '**' = .05, '***' = .01),
          output= 'testscore-output-r.html',
+         stars=c('*' = .1, '**' = .05, '***' = .01),
          fmt="%.3f",
          gof_map = gm, escape=FALSE,
          coef_map = cm,
-         notes = "Standard errors in parentheses")
+         notes = "Standard errors in parentheses. Columns 4-6 cluster standard errors at the community level.")
