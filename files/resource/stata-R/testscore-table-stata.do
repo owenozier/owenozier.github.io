@@ -1,6 +1,12 @@
 // Owen Ozier
 // 2023-04-10
 
+* install esttab if needed, it is part of the estout package
+capture which esttab
+if _rc!=0 {
+  ssc install estout, replace
+}
+
 * get to output directory
 cd "C:\Users\oweno\Dropbox\00\tmp\2023-04\out"
 
