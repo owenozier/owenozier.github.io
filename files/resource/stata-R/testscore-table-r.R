@@ -46,7 +46,7 @@ cm <- c('cmsch'    = 'Parent schooling (avg)',
 # put everything in the table, annotate significance levels, save
 msummary(list(m1, m2, m3, m4, m5, m6),
          stars=c('*' = .1, '**' = .05, '***' = .01),
-         output= 'testscore_output_r.html',
+         output= 'testscore-output-r.html',
          fmt="%.3f",
          gof_map = gm, escape=FALSE,
          coef_map = cm,
