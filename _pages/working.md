@@ -135,17 +135,24 @@ siblings and overall impacts on parental time investments in children.
 
 
 # A Firm of One's Own: Experimental Evidence on Credit Constraints and Occupational Choice
-Appears as [World Bank WPS 7977, February 2017](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/428361487270218330/a-firm-of-ones-own-experimental-evidence-on-credit-constraints-and-occupational-choice); 
-(Also available from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2923530).)
 
+Newest version: [CGD Working Paper 646, May 2023](https://www.cgdev.org/sites/default/files/firm-ones-own-experimental-evidence-credit-constraints-and-occupational-choice.pdf)
+
+Previous version appears as [World Bank WPS 7977, February 2017](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/428361487270218330/a-firm-of-ones-own-experimental-evidence-on-credit-constraints-and-occupational-choice); 
+(Also available from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2923530).)
 (Also appears as [IZA Discussion Paper 10583](http://ftp.iza.org/dp10583.pdf).)
 
-Joint with [Andrew Brudevold-Newman](https://econ.andrewbrudevold.com/), Maddalena Honorati, and [Pamela Jakiela](https://pamjakiela.com)
+Joint with [Andrew Brudevold-Newman](https://econ.andrewbrudevold.com/), Maddalena Honorati, Gerald Ipapa, and [Pamela Jakiela](https://pamjakiela.com)
+
+[CGD Blog Post](https://www.cgdev.org/blog/beyond-cash-enduring-impacts-youth-entrepreneurship-program-kenyan-women)
+
 
 ## Abstract
 This study presents results from a randomized evaluation of two labor market interventions targeted to young women aged 18 to 19 years in three of Nairobi's poorest neighborhoods. One treatment offered participants a bundled intervention designed to simultaneously relieve credit and human capital constraints; a second treatment provided women with an unrestricted cash grant, but no training or other support. Both interventions had economically large and statistically significant impacts on income over the medium term (7 to 10 months after the end of the interventions), but these impacts dissipated in the second year after treatment. The results are consistent with a model in which savings constraints prevent women from smoothing consumption after receiving large transfers -- even in the absence of credit constraints, and when participants have no intention of remaining in entrepreneurship. The study also shows that participants hold remarkably accurate beliefs about the impacts of the treatments on occupational choice.
 
 ## Policy briefs
+
+[2023 <b>IZA GLMLIC</b> Policy Brief: <i>Comparing the Effects of Entrepreneurship Promotion Programs on Young Women in Nairobi</i>](https://g2lm-lic.iza.org/wp-content/uploads/2023/01/GLMLIC-Policy-Brief_057.pdf)
 
 [2017 <b>IZA GLMLIC</b> Policy Brief: <i>Girls Empowered by Microfranchising: Estimating the Impacts of Microfranchising on Young Women in Nairobi</i>](https://g2lm-lic.iza.org/wp-content/uploads/2017/05/GLMLIC-Policy-Brief_012.pdf)
 
