@@ -7,6 +7,20 @@ redirect_from:
   - /resume
 ---
 
+# Preprimary Education and Early Childhood Development: Evidence from Government Schools in Rural Kenya
+
+Most recent version appears as [CGD Working Paper 661, October 2023](https://cgdev.org/sites/default/files/preprimary-education-early-childhood-development-government-schools-rural-kenya.pdf)
+
+Joint with [Pamela Jakiela](https://pamjakiela.com), Heather Knauer, and Lia C. H. Fernald
+
+## Abstract
+We estimate the impact of preprimary education on early childhood development in a sample of Kenyan three-year-olds. Our identification strategy exploits the fact that children in our sample are more likely to start school at age three rather than at age four if they live within a few hundred meters of the nearest primary school, though other household characteristics do not vary across such small distances. Instrumental variables estimation suggests that enrolling in preschool at age three has large positive impacts on vocabulary in children’s mother tongue, which is the primary language of instruction in preprimary. However, we do not find evidence that these short-term gains translate into persistent advantages in vocabulary or other measures of child development one to three years later.
+
+## Media
+
+[Blog at <b>CGD</b>: <i>Preschools: They’re Good! But They Could Be Better</i>](https://cgdev.org/blog/preschools-theyre-good-they-could-be-better)
+
+
 # Can Education be Standardized? Evidence from Kenya
 
 Most recent version appears as [Becker Friedman Institute Working Paper 2022-168, June 2022](https://bfi.uchicago.edu/working-paper/2022-68/)
