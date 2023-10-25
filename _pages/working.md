@@ -20,6 +20,7 @@ We estimate the impact of preprimary education on early childhood development in
 
 [Blog at <b>CGD</b>: <i>Preschools: They’re Good! But They Could Be Better</i>](https://cgdev.org/blog/preschools-theyre-good-they-could-be-better)
 
+<br/>
 
 # Can Education be Standardized? Evidence from Kenya
 
@@ -57,6 +58,8 @@ results do not seem to be driven by rote memorization or by income effects of th
 
 [Trial Registry AEARCTR-0005382](https://www.socialscienceregistry.org/trials/5382)
 
+<br/>
+
 
 # Gendered Language
 
@@ -89,7 +92,7 @@ for women's equality and reduced female bargaining power within the household.
 
 
 
-<br>
+<br/>
 
 
 # Big Sisters
@@ -110,7 +113,7 @@ Coverage in [The Telegraph](https://www.telegraph.co.uk/global-health/women-and-
 
 
 
-<br>
+<br/>
 
 
 
@@ -142,7 +145,7 @@ siblings and overall impacts on parental time investments in children.
 
 
 
-<br>
+<br/>
 
 
 
@@ -189,7 +192,7 @@ This study presents results from a randomized evaluation of two labor market int
 
 
 
-<br>
+<br/>
 
 
 
