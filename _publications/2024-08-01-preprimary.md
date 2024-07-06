@@ -24,7 +24,7 @@ but does not impact vocabulary at later ages.
 
 ## Other versions
 
-# Preprimary Education and Early Childhood Development: Evidence from Government Schools in Rural Kenya
+<!--- # Preprimary Education and Early Childhood Development: Evidence from Government Schools in Rural Kenya --->
 
 <!--- Recent pre-print version: [CGD Working Paper 646, May 2023](https://www.cgdev.org/sites/default/files/firm-ones-own-experimental-evidence-credit-constraints-and-occupational-choice.pdf) --->
 
