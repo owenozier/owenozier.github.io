@@ -4,7 +4,7 @@ collection: publications
 excerpt: ''
 permalink: /publication/2024-12-01-firm-of-ones-own
 date: 2024-12-01
-venue: 'Review of Economics and Statistics (conditionally accepted)'
+venue: 'Review of Economics and Statistics (accepted)'
 paperurl: 'https://www.cgdev.org/sites/default/files/firm-ones-own-experimental-evidence-credit-constraints-and-occupational-choice.pdf'
 ---
 
