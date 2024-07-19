@@ -5,7 +5,7 @@ excerpt: ''
 permalink: /publication/2024-08-01-preprimary
 date: 2024-08-01
 venue: 'Journal of Development Economics (forthcoming)'
-paperurl: 'https://www.cgdev.org/sites/default/files/preprimary-education-early-childhood-development-government-schools-rural-kenya.pdf'
+paperurl: 'https://www.sciencedirect.com/science/article/abs/pii/S0304387824000865'
 ---
 
 
@@ -28,6 +28,10 @@ but does not impact vocabulary at later ages.
 
 <!--- Recent pre-print version: [CGD Working Paper 646, May 2023](https://www.cgdev.org/sites/default/files/firm-ones-own-experimental-evidence-credit-constraints-and-occupational-choice.pdf) --->
 
+[Link to in-press paper in the Journal of Development Economics](https://www.sciencedirect.com/science/article/abs/pii/S0304387824000865)
+
+<!--- [Link to published paper in the Journal of Development Economics](https://www.sciencedirect.com/science/article/abs/pii/S0304387824000865) --->
+
 Previous version appears as [CGD Working Paper 661, October 2023](https://cgdev.org/sites/default/files/preprimary-education-early-childhood-development-government-schools-rural-kenya.pdf)
 
 <!--- excerpt: 'This paper reports on a two-tiered experiment designed to separately identify the selection and effort margins of pay-for-performance (P4P).' --->
@@ -35,8 +39,6 @@ Previous version appears as [CGD Working Paper 661, October 2023](https://cgdev.
 
 
 Joint with [Pamela Jakiela](https://pamjakiela.com), Heather Knauer, and Lia C. H. Fernald
-
-<!--- [Link to published paper in the American Economic Review](https://www.aeaweb.org/articles?id=10.1257/aer.20191972) --->
 
 <!--- [Pre-print 2021 manuscript (pdf)](http://owenozier.github.io/files/papers/LeaverOzierSerneelsZeitlin-RecruitmentEffortRetentionRwanda-2021-01.pdf) --->
 
