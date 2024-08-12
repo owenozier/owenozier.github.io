@@ -49,9 +49,9 @@ Joint with [Pamela Jakiela](https://pamjakiela.com), Heather Knauer, and Lia C. 
 <!--- Earlier version appears as [World Bank WPS 9395, September 2020](https://documents.worldbank.org/en/publication/documents-reports/documentdetail/440111599837928395/recruitment-effort-and-retention-effects-of-performance-contracts-for-civil-servants-experimental-evidence-from-rwandan-primary-schools), also available as [IZA discussion paper 13696](http://ftp.iza.org/dp13696.pdf) and from [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3695397) --->
 
 
-<!--- ## Data --->
+## Data
 
-<!--- Data and analysis files: [(hosted at ICPSR)](https://doi.org/10.3886/E121941V1) --->
+Data and analysis files: [(hosted at the Harvard Dataverse)](https://doi.org/10.7910/DVN/UV8BOW)
 
 <!--- DIRECT URL: https://www.openicpsr.org/openicpsr/project/121941/version/V1/view --->
 <!---/ [(hosted at github)](http://owenozier.github.io/files/data/FILENAMEHERE.zip) --->
