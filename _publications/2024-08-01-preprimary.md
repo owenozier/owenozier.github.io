@@ -28,7 +28,7 @@ but does not impact vocabulary at later ages.
 
 <!--- Recent pre-print version: [CGD Working Paper 646, May 2023](https://www.cgdev.org/sites/default/files/firm-ones-own-experimental-evidence-credit-constraints-and-occupational-choice.pdf) --->
 
-[Link to in-press paper in the Journal of Development Economics](https://www.sciencedirect.com/science/article/abs/pii/S0304387824000865)
+[Link to published paper in the Journal of Development Economics](https://www.sciencedirect.com/science/article/abs/pii/S0304387824000865)
 
 <!--- [Link to published paper in the Journal of Development Economics](https://www.sciencedirect.com/science/article/abs/pii/S0304387824000865) --->
 
