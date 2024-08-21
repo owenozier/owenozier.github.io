@@ -4,7 +4,7 @@ collection: publications
 excerpt: ''
 permalink: /publication/2024-08-01-preprimary
 date: 2024-08-01
-venue: 'Journal of Development Economics (forthcoming)'
+venue: 'Journal of Development Economics (2024)'
 paperurl: 'https://www.sciencedirect.com/science/article/abs/pii/S0304387824000865'
 ---
 
@@ -66,10 +66,10 @@ Data and analysis files: [(hosted at the Harvard Dataverse)](https://doi.org/10.
 
 JEL codes:  O12, I25, J24, H52
 
-<!--- Recommended citation: Leaver, Clare, Owen Ozier, Pieter Serneels, and Andrew Zeitlin. &quot;Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools.&quot; <i>American Economic Review</i> 111, no. 7 (2021): 2213-46. --->
+Recommended citation: Jakiela, Pamela, Owen Ozier, Lia C. H. Fernald, and Heather A. Knauer. &quot;Preprimary Education and Early Childhood Development: Evidence from Government Schools in Rural Kenya.&quot; <i>Journal of Development Economics</i> 171 (2024): 103337.
 
 
-<!--- DOI: https://doi.org/10.1257/app.20160183 --->
+DOI: https://doi.org/10.1016/j.jdeveco.2024.103337
 
 
 <br/>
