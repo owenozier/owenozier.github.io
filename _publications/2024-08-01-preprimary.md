@@ -4,7 +4,7 @@ collection: publications
 excerpt: ''
 permalink: /publication/2024-08-01-preprimary
 date: 2024-08-01
-venue: 'Journal of Development Economics (2024)'
+venue: 'Journal of Development Economics'
 paperurl: 'https://www.sciencedirect.com/science/article/abs/pii/S0304387824000865'
 ---
 
