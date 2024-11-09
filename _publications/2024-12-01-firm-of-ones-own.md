@@ -5,7 +5,7 @@ excerpt: ''
 permalink: /publication/2024-12-01-firm-of-ones-own
 date: 2024-12-01
 venue: 'Review of Economics and Statistics (accepted)'
-paperurl: 'https://www.cgdev.org/sites/default/files/firm-ones-own-experimental-evidence-credit-constraints-and-occupational-choice.pdf'
+paperurl: 'https://direct.mit.edu/rest/article-abstract/doi/10.1162/rest_a_01529/125020/A-Firm-of-One-s-Own-Experimental-Evidence-on'
 ---
 
 
@@ -21,6 +21,8 @@ women in the control group and those who received the grants.
 
 ## Other versions
 
+[Link to published paper in the Review of Economics and Statistics](https://direct.mit.edu/rest/article-abstract/doi/10.1162/rest_a_01529/125020/A-Firm-of-One-s-Own-Experimental-Evidence-on)
+
 <!--- excerpt: 'This paper reports on a two-tiered experiment designed to separately identify the selection and effort margins of pay-for-performance (P4P).' --->
 <!--- citation: 'Leaver, Clare, Owen Ozier, Pieter Serneels, and Andrew Zeitlin. Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools. Mimeo. Washington: World Bank, 2020.' --->
 
@@ -31,8 +33,6 @@ Previous version appears as [World Bank WPS 7977, February 2017](https://documen
 (Also appears as [IZA Discussion Paper 10583](http://ftp.iza.org/dp10583.pdf).)
 
 Joint with [Andrew Brudevold-Newman](https://econ.andrewbrudevold.com/), Maddalena Honorati, [Gerald Ipapa](https://sites.google.com/view/geraldipapa/home), and [Pamela Jakiela](https://pamjakiela.com)
-
-<!--- [Link to published paper in the American Economic Review](https://www.aeaweb.org/articles?id=10.1257/aer.20191972) --->
 
 <!--- [Pre-print 2021 manuscript (pdf)](http://owenozier.github.io/files/papers/LeaverOzierSerneelsZeitlin-RecruitmentEffortRetentionRwanda-2021-01.pdf) --->
 
@@ -81,11 +81,11 @@ JEL codes:  J24, M53, O12
 [Trial Registry AEARCTR-0000459](https://www.socialscienceregistry.org/trials/459)
 
 
-<!--- Recommended citation: Leaver, Clare, Owen Ozier, Pieter Serneels, and Andrew Zeitlin. &quot;Recruitment, effort, and retention effects of performance contracts for civil servants: Experimental evidence from Rwandan primary schools.&quot; <i>American Economic Review</i> 111, no. 7 (2021): 2213-46. --->
+Recommended citation: Brudevold-Newman, Andrew,  Maddalena Honorati, Gerald Ipapa, Pamela Jakiela, and Owen Ozier. &quot;A Firm of One's Own: Experimental Evidence on Credit Constraints and Occupational Choice.&quot; <i>The Review of Economics and Statistics</i> (2024) DOI 10.1162/rest_a_01529 
+<!--- 111, no. 7 (2021): 2213-46. --->
 
 
-<!--- DOI: https://doi.org/10.1257/app.20160183 --->
-
+DOI: https://doi.org/10.1162/rest_a_01529 
 
 <br/>
 
