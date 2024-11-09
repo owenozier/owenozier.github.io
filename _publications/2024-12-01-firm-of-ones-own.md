@@ -4,7 +4,7 @@ collection: publications
 excerpt: ''
 permalink: /publication/2024-12-01-firm-of-ones-own
 date: 2024-12-01
-venue: 'Review of Economics and Statistics (accepted)'
+venue: 'Review of Economics and Statistics'
 paperurl: 'https://direct.mit.edu/rest/article-abstract/doi/10.1162/rest_a_01529/125020/A-Firm-of-One-s-Own-Experimental-Evidence-on'
 ---
 
