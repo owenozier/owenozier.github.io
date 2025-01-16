@@ -15,12 +15,13 @@ Prof. Ozier’s work has been covered by <i>The Economist</i> and on <i>National
 He has also published recent work in leading child development journals, including <i>Developmental Science</i> and <i>Early Childhood Research Quarterly</i>.
 His published and current research projects include studies in Kenya, Nigeria, and Rwanda. His work focuses on health, education, and economic decisions in Sub-Saharan Africa.
 
-Links: [Google Scholar](https://scholar.google.com/citations?user=ZCUpw6oAAAAJ&hl=en) |
+[Google Scholar](https://scholar.google.com/citations?user=ZCUpw6oAAAAJ&hl=en) |
 [RePEc](https://ideas.repec.org/e/poz63.html) |
 [BlueSky](https://bsky.app/profile/owenozier.bsky.social) |
-[Twitter](https://twitter.com/OwenOzier) |
-<a rel="me" href="https://econtwitter.net/@owenozier">Mastodon</a> |
 [Economics at Williams](https://econ.williams.edu/) |
 [Data Science at Williams](https://www.williams.edu/data-science/)
+
+Older/inactive: [Twitter](https://twitter.com/OwenOzier) |
+<a rel="me" href="https://econtwitter.net/@owenozier">Mastodon</a> 
 
 ###### <sub><i>Page built from the [academicpages template](https://github.com/academicpages/academicpages.github.io)</i></sub>
