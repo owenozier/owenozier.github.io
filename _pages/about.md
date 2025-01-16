@@ -20,7 +20,7 @@ Links: [Google Scholar](https://scholar.google.com/citations?user=ZCUpw6oAAAAJ&h
 [BlueSky](https://bsky.app/profile/owenozier.bsky.social) |
 [Twitter](https://twitter.com/OwenOzier) |
 <a rel="me" href="https://econtwitter.net/@owenozier">Mastodon</a> |
-[Williams College Economics](https://econ.williams.edu/) |
-[Williams College Data Science](https://www.williams.edu/data-science/)
+[Economics at Williams](https://econ.williams.edu/) |
+[Data Science at Williams](https://www.williams.edu/data-science/)
 
 ###### <sub><i>Page built from the [academicpages template](https://github.com/academicpages/academicpages.github.io)</i></sub>
