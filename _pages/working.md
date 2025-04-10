@@ -7,6 +7,21 @@ redirect_from:
   - /resume
 ---
 
+
+# The Software Behind the Stats: A Student Exploration of Software Trends Across Disciplines
+
+Appears as [Stat arXiv 2504.06507](https://arxiv.org/abs/2504.06507)
+
+Joint with [Elizabeth Upton](https://www.eupton.com/), [Xizhen Cai](https://sites.google.com/view/xizhen-cai/),  [Pamela Jakiela](https://pamjakiela.com), and [Shyam Raman](http://www.shyamkraman.com/)
+
+## Abstract
+
+This paper presents a student-led activity designed to explore the use of statistical software in academic research across economics, political science, and statistics. Students reviewed replication files from major journals and repositories, gaining hands-on experience with reproducible workflows while contributing to cross-disciplinary datasets. Web-scraped metadata and student data collection, together covering more than 10,000 papers, reveal clear disciplinary patterns: Stata remains dominant in economics, while R is increasingly popular in political science and is the standard in statistics. Within the social sciences, a growing number of articles also use multiple software platforms within a single manuscript. Students reported increased understanding of academic workflows and greater awareness of software diversity in quantitative research. The activity is easy to adapt across course levels and disciplines, and we offer suggestions for follow-up assignments that reinforce key concepts in reproducibility and data fluency. The resulting insights into current software practices are also valuable for instructors seeking to align their teaching with evolving trends in research.
+
+
+<br/>
+
+
 # Can Education be Standardized? Evidence from Kenya
 
 Most recent version appears as [Becker Friedman Institute Working Paper 2022-168, June 2022](https://bfi.uchicago.edu/working-paper/2022-68/)
