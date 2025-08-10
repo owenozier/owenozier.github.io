@@ -10,9 +10,6 @@ paperurl: 'https://doi.org/10.3368/jhr.0623-12969R1'
 
 
 ## Abstract
-
-<!--- when --->
-<!--- We model household investments in young children when parents and older siblings share caregiving responsibilities and when investments by older siblings contribute to young children’s human capital accumulation. To test the predictions of our model, we estimate the impact of having one older sister (as opposed to one older brother) on early childhood development in a sample of rural Kenyan households with otherwise similar family structures. Older sibling gender is not related to household structure, subsequent birth spacing, or other observable characteristics, so we treat the presence of an older girl (as opposed to an older boy) as plausibly exogenous. Having an older sister rather than an older brother improves younger siblings’ vocabulary and fine motor skills by more than 0.1 standard deviations. Viewed through the lens of our model, the empirical pattern we observe suggests that: (i) older siblings’ investments in young children contribute to their human capital accumulation, and (ii) households perceive lower returns to investing in older girls than in older boys. --->
 We model household investments in young children when parents and older siblings share
 caregiving responsibilities and investments by older siblings contribute to young children’s
 human capital accumulation. To test the predictions of our model, we estimate the impact of
@@ -20,6 +17,11 @@ having an older sister (as opposed to an older brother) on early childhood devel
 sample of rural Kenyan households with otherwise similar family structures. Having an older
 sister rather than an older brother improves younger siblings’ vocabulary and fine motor
 skills by more than 0.1 standard deviations.
+
+
+<!-- note lost word -->
+<!--- when --->
+<!--- We model household investments in young children when parents and older siblings share caregiving responsibilities and when investments by older siblings contribute to young children’s human capital accumulation. To test the predictions of our model, we estimate the impact of having one older sister (as opposed to one older brother) on early childhood development in a sample of rural Kenyan households with otherwise similar family structures. Older sibling gender is not related to household structure, subsequent birth spacing, or other observable characteristics, so we treat the presence of an older girl (as opposed to an older boy) as plausibly exogenous. Having an older sister rather than an older brother improves younger siblings’ vocabulary and fine motor skills by more than 0.1 standard deviations. Viewed through the lens of our model, the empirical pattern we observe suggests that: (i) older siblings’ investments in young children contribute to their human capital accumulation, and (ii) households perceive lower returns to investing in older girls than in older boys. --->
 
 
 ## Other versions
