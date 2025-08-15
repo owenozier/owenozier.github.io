@@ -10,7 +10,7 @@ paperurl: 'https://www.e-elgar.com/shop/usd/handbook-of-experimental-development
 
 
 ## Abstract
-Experimental Development Economics as a field of study is relatively new in Economics.
+Experimental Development Economics as a field of study is relatively new in economics.
 Consequently, as part of this handbook project we conceived a special chapter dedicated
 towards collecting some of the thoughts, comments and opinions from four prominent and
 established young scholars in the field as our final chapter of this handbook collection.
