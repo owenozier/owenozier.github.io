@@ -25,7 +25,7 @@ Pre-print manuscript version: [available from SSRN](https://papers.ssrn.com/sol3
 Joint with [Utteeyo Dasgupta](https://sites.google.com/view/utteeyodasgupta/home), [Pushkar Maitra](https://sites.google.com/site/homepageforpushkarmaitra/), [Pamela Jakiela](https://pamjakiela.com), [Danila Serra](https://people.tamu.edu/~dserra/), and [Angelino Viceisza](https://www.angelinoviceisza.com/)
 
 
-Recommended citation: Dasgupta, Utteeyo, Pamela Jakiela, Pushkar Maitra, Owen Ozier, Danila Serra, and Angelino Viceisza.. &quot;Experimental development economics: current scope and future directions.&quot; Chapter 14 in <i>The Handbook of Experimental Development Economics</i>, edited by Utteeyo Dasgupta and Pushkar Maitra, 337-349. Edward Elgar Publishing (2025) DOI 10.3368/jhr.0623-12969R1 
+Recommended citation: Dasgupta, Utteeyo, Pamela Jakiela, Pushkar Maitra, Owen Ozier, Danila Serra, and Angelino Viceisza. &quot;Experimental development economics: current scope and future directions.&quot; Chapter 14 in <i>The Handbook of Experimental Development Economics</i>, edited by Utteeyo Dasgupta and Pushkar Maitra, 337-349. Edward Elgar Publishing (2025) 
 
 
 
