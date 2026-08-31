@@ -1,9 +1,9 @@
 ---
-title: "The Software Behind the Stats"
+title: "The Software Behind the Stats: A Student Exploration of Software Trends in Economics, Political Science, and Statistics"
 collection: publications
-permalink: /publication/2026-09-01-software-stats
+permalink: /publication/2026-08-31-software-stats
 excerpt: ''
-date: 2026-09-01
+date: 2026-08-31
 venue: 'Journal of Statistics and Data Science Education'
 paperurl: 'https://www.tandfonline.com/doi/full/10.1080/26939169.2026.2725967'
 ---
@@ -30,3 +30,7 @@ Recommended citation: Upton, Elizabeth, Xizhen Cai, Pamela Jakiela, Owen Ozier, 
 DOI: [https://doi.org/10.1080/26939169.2026.2725967](https://doi.org/10.1080/26939169.2026.2725967)
 
 <br/>
+
+
+
+
