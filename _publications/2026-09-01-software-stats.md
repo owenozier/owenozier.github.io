@@ -1,5 +1,5 @@
 ---
-title: "The Software Behind the Stats: A Student Exploration of Software Trends in Economics, Political Science, and Statistics"
+title: "The Software Behind the Stats"
 collection: publications
 permalink: /publication/2026-09-01-software-stats
 excerpt: ''
@@ -25,8 +25,8 @@ Data and analysis files:
 
 ## Other details
 
-Recommended citation:
-Upton, Elizabeth, Xizhen Cai, Pamela Jakiela, Owen Ozier, and Shyam Raman. 2026. &quot;The Software Behind the Stats: A Student Exploration of Software Trends in Economics, Political Science, and Statistics.&quot; <i>Journal of Statistics and Data Science Education,</i> August, 1–19. doi:10.1080/26939169.2026.2725967.
+Recommended citation: Upton, Elizabeth, Xizhen Cai, Pamela Jakiela, Owen Ozier, and Shyam Raman. 2026. &quot;The Software Behind the Stats: A Student Exploration of Software Trends in Economics, Political Science, and Statistics.&quot; <i>Journal of Statistics and Data Science Education,</i> August, 1–19. doi:10.1080/26939169.2026.2725967.
 
 DOI: [https://doi.org/10.1080/26939169.2026.2725967](https://doi.org/10.1080/26939169.2026.2725967)
 
+<br/>
