@@ -37,3 +37,8 @@ These files are courtesy of Saahil Karpe.
 [3. Example GPS dataset](http://owenozier.github.io/files/resource/gpscto/school_location.csv)
 
 
+<!--- 2026 --->
+## Elementary/middle education resource
+Link to LEGO Spike Prime online simulator
+
+[LEGO Spike Prime online simulator](https://www.cs2n.org/badges/virtual-spike-prime-coding-2-0-iris-rover-challenge/programming-with-virtual-spike-prime)
