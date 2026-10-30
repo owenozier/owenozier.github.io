@@ -22,6 +22,11 @@ Earlier version appears as [Stat arXiv 2504.06507](https://arxiv.org/abs/2504.06
 Data and analysis files:
 [(hosted at OSF)](https://osf.io/72ajq/overview)
 
+## Media
+
+Media:
+[American Statistical Association's Learning Curves Podcast | Episode 4: Teaching Reproducibility in the Age of AI](https://www.youtube.com/watch?v=w012cZp1zdA)
+
 
 ## Other details
 
