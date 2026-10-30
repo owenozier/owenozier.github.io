@@ -24,7 +24,7 @@ Data and analysis files:
 
 ## Media
 
-[American Statistical Association's Learning Curves Podcast | Episode 4: Teaching Reproducibility in the Age of AI](https://www.youtube.com/watch?v=w012cZp1zdA)
+[American Statistical Association's Learning Curves Podcast - Episode 4: Teaching Reproducibility in the Age of AI](https://www.youtube.com/watch?v=w012cZp1zdA)
 
 
 ## Other details
