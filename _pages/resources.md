@@ -41,6 +41,17 @@ These files are courtesy of Saahil Karpe.
 ## Elementary/middle education resource
 Link to LEGO Spike Prime online simulator
 
-[LEGO Spike Prime online simulator - main link](https://www.cs2n.org/badges/virtual-spike-prime-coding-2-0-iris-rover-challenge/programming-with-virtual-spike-prime)
+[LEGO Spike Prime online simulator - link 1 - rover sequential movements](https://www.cs2n.org/badges/virtual-spike-prime-coding-2-0-iris-rover-challenge/mini-challenge-sequential-movements)
 
-[Additional LEGO Spike modules to browse](https://www.cs2n.org/u/tracks?name=spike#)
+[LEGO Spike Prime online simulator - link 2 - rover navigation challenge](https://www.cs2n.org/badges/virtual-spike-prime-coding-2-0-iris-rover-challenge/programming-with-virtual-spike-prime)
+
+[LEGO Spike Prime online simulator - link 3 - sensors and waiting - forward until stop line](https://www.cs2n.org/badges/wait-until-sensors-with-spike-prime/mini-challenge-forward-until-stop-line)
+
+[LEGO Spike Prime online simulator - link 4 - sensors and waiting - vacuum challenge](https://www.cs2n.org/badges/wait-until-sensors-with-spike-prime/mini-challenge-vacuum-challenge)
+
+[LEGO Spike Prime online simulator - link 5 - sensors and waiting - investigate collapsed building](https://www.cs2n.org/badges/wait-until-sensors-with-spike-prime/mini-challenge-investigating-the-collapsed-building)
+
+
+
+
+[Additional LEGO Spike modules - many offline activities - to browse](https://www.cs2n.org/u/tracks?name=spike#)
