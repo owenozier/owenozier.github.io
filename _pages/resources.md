@@ -41,4 +41,6 @@ These files are courtesy of Saahil Karpe.
 ## Elementary/middle education resource
 Link to LEGO Spike Prime online simulator
 
-[LEGO Spike Prime online simulator](https://www.cs2n.org/badges/virtual-spike-prime-coding-2-0-iris-rover-challenge/programming-with-virtual-spike-prime)
+[LEGO Spike Prime online simulator - main link](https://www.cs2n.org/badges/virtual-spike-prime-coding-2-0-iris-rover-challenge/programming-with-virtual-spike-prime)
+
+[Additional LEGO Spike modules to browse](https://www.cs2n.org/u/tracks?name=spike#)
