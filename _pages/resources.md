@@ -43,7 +43,7 @@ Link to LEGO Spike Prime online simulator
 
 [LEGO Spike Prime online simulator - link 1 - rover sequential movements](https://www.cs2n.org/badges/virtual-spike-prime-coding-2-0-iris-rover-challenge/mini-challenge-sequential-movements)
 
-[LEGO Spike Prime online simulator - link 2 - rover crater navigation challenge](https://www.cs2n.org/badges/virtual-spike-prime-coding-2-0-iris-rover-challenge/programming-with-virtual-spike-prime)
+[LEGO Spike Prime online simulator - link 2 - rover crater navigation challenge](https://www.cs2n.org/badges/virtual-spike-prime-coding-2-0-iris-rover-challenge/mini-challenge-turn-around-the-craters)
 
 [LEGO Spike Prime online simulator - link 3 - sensors and waiting - forward until stop line](https://www.cs2n.org/badges/wait-until-sensors-with-spike-prime/mini-challenge-forward-until-stop-line)
 
