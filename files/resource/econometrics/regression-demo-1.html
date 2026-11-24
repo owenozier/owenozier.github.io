@@ -64,7 +64,7 @@ yrange: 0 10
    LAYOUT: title band, then plot left / live dashboard right; stacks under 900px; point table and data editor below. */
 :root{color-scheme:light dark;
  --bg:light-dark(#eef1f7,#070f26);--panel:light-dark(#ffffff,#0d1a3d);--ink:light-dark(#0b1f4b,#e8ecf7);
- --muted:light-dark(#55618a,#9aa6c8);--line:light-dark(#d6dcea,#22325f);--band:#0b1f4b;
+ --muted:light-dark(#55618a,#9aa6c8);--line:light-dark(#d6dcea,#22325f);--band:#500082;
  --hot:#e0115f;--pt:light-dark(#0b1f4b,#e8ecf7);--x:#2a7de1;--y:#e08a00;--grid:light-dark(#edf0f6,#142454)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
@@ -73,23 +73,23 @@ h1,h2,.big,.eq{font-family:"Red Hat Display",system-ui,sans-serif}
 .band{padding:clamp(22px,3vw,40px) max(4vw,16px)}
 header.band{background:var(--band);color:#fff;padding-bottom:clamp(18px,2.4vw,28px)}
 h1{margin:0;font-size:clamp(30px,4vw,46px);line-height:1.05;text-wrap:balance;font-weight:700}
-header p{margin:.5em 0 0;max-width:68ch;color:#c9d3ee}
+header p{margin:.5em 0 0;max-width:68ch;color:#e6d6f2}
 .wrap{max-width:1240px;margin:0 auto}
 .bar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:18px}
-.bar label,.lab{font-size:14px;color:#c9d3ee}
+.bar label,.lab{font-size:14px;color:#e6d6f2}
 select,button{font:inherit;font-size:16px;min-height:44px;border-radius:8px;padding:0 14px;cursor:pointer}
-select{background:#fff;color:#0b1f4b;border:0}
-button{background:transparent;color:#fff;border:1.5px solid #6f80b3}
+select{background:#fff;color:#500082;border:0}
+button{background:transparent;color:#fff;border:1.5px solid #a27cc4}
 button.go{background:var(--hot);border-color:var(--hot);font-weight:600}
 button:focus-visible,select:focus-visible,.p:focus-visible,.seg input:focus-visible+span,textarea:focus-visible{outline:3px solid var(--hot);outline-offset:2px}
-.chk{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:15px;color:#e0e6f6;cursor:pointer}
+.chk{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:15px;color:#f1e8f8;cursor:pointer}
 .chk input{width:18px;height:18px;accent-color:var(--hot)}
-.seg{display:inline-flex;border:1.5px solid #6f80b3;border-radius:8px;overflow:hidden}
+.seg{display:inline-flex;border:1.5px solid #a27cc4;border-radius:8px;overflow:hidden}
 .seg label{position:relative;cursor:pointer}
 .seg input{position:absolute;opacity:0}
-.seg span{display:flex;align-items:center;min-height:41px;padding:0 13px;font-size:15px;color:#e0e6f6;white-space:nowrap}
-.seg label+label span{border-left:1.5px solid #6f80b3}
-.seg input:checked+span{background:#fff;color:#0b1f4b;font-weight:600}
+.seg span{display:flex;align-items:center;min-height:41px;padding:0 13px;font-size:15px;color:#f1e8f8;white-space:nowrap}
+.seg label+label span{border-left:1.5px solid #a27cc4}
+.seg input:checked+span{background:#fff;color:#500082;font-weight:600}
 .ob{text-decoration:overline;text-decoration-thickness:.08em;text-underline-offset:0}
 main.band{padding-top:clamp(18px,2.4vw,28px)}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px}
@@ -110,6 +110,7 @@ main.band{padding-top:clamp(18px,2.4vw,28px)}
 .slope{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:flex;flex-direction:column;gap:8px}
 .frac{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .frac b{font-size:19px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.se b{font-size:17px}
 #b1line{font-size:14px;font-variant-numeric:tabular-nums}
 .sel{border-top:1px solid var(--line);padding-top:14px}
 .sel h2{font-size:18px;margin:0 0 8px}
@@ -188,6 +189,8 @@ svg text{font-family:"Red Hat Text",system-ui,sans-serif}
     <div class="frac"><span class="k">Numerator, Σ(y − ȳ)(x − <span class="ob">x</span>)</span><b id="sxy"></b></div>
     <div class="frac"><span class="k">Denominator, Σ(x − <span class="ob">x</span>)²</span><b id="sxx"></b></div>
     <div class="k" id="b1line"></div>
+    <div class="frac se" title="√[ (RSS / (n − 2)) / Σ(x − x̄)² ]"><span class="k">SE of slope, homoskedastic</span><b id="seh"></b></div>
+    <div class="frac se" title="√[ (1/n) · ((1/(n − 2)) Σ(x − x̄)² û²) / ((1/n) Σ(x − x̄)²)² ]"><span class="k">SE of slope, robust (HC1)</span><b id="ser"></b></div>
    </div>
    <div class="stats">
     <div><span class="k"><span class="ob">x</span></span><b id="xbar"></b></div>
@@ -282,7 +285,10 @@ function stats(){
  for(let i=0;i<n;i++){const dx=X[i]-xb,dy=Y[i]-yb;sxx+=dx*dx;sxy+=dx*dy;syy+=dy*dy}
  const ok=sxx>1e-12,b1=ok?sxy/sxx:NaN,b0=yb-b1*xb,yh=X.map(x=>b0+b1*x),res=Y.map((y,i)=>y-yh[i]);
  const ssr=ok?res.reduce((a,r)=>a+r*r,0):NaN;
- return{sxx,sxy,n,xb,yb,b1,b0,yh,res,ssr,ok,sst:syy,r2:ok&&syy>0?1-ssr/syy:NaN,r:ok&&syy>0?sxy/Math.sqrt(sxx*syy):NaN};
+ const okSE=ok&&n>2,seH=okSE?Math.sqrt(ssr/(n-2)/sxx):NaN;
+ const meat=X.reduce((a,x,i)=>a+(x-xb)**2*res[i]**2,0);
+ const seR=okSE?Math.sqrt((1/n)*(meat/(n-2))/((sxx/n)**2)):NaN;
+ return{seH,seR,sxx,sxy,n,xb,yb,b1,b0,yh,res,ssr,ok,sst:syy,r2:ok&&syy>0?1-ssr/syy:NaN,r:ok&&syy>0?sxy/Math.sqrt(sxx*syy):NaN};
 }
 
 /* ---------- drawing ---------- */
@@ -340,6 +346,7 @@ function render(){
  $('r2').textContent=isNaN(S.r2)?'—':f3(S.r2);
  $('r').textContent=isNaN(S.r)?'—':neg(f3(S.r));
  $('sxy').textContent=neg(f3(S.sxy));$('sxx').textContent=f3(S.sxx);
+ $('seh').textContent=isNaN(S.seH)?'—':f3(S.seH);$('ser').textContent=isNaN(S.seR)?'—':f3(S.seR);
  $('b1line').textContent=S.ok?`Slope = ${neg(f3(S.sxy))} ÷ ${f3(S.sxx)} = ${neg(f3(S.b1))}`:'Slope undefined: the denominator is 0';
  $('n').textContent=S.n;$('xbar').textContent=f2(S.xb);$('ybar').textContent=f2(S.yb);$('sst').textContent=f3(S.sst);
  const v=n=>S.ok?neg(f2(n)):'—';
