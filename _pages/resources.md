@@ -6,6 +6,10 @@ author_profile: true
 redirect_from:
   - /resume
 ---
+<!--- 2026 --->
+## Econometrics visualization
+[Visualizing regression demo 1](https://owenozier.github.io/files/resource/econometrics/regression-demo-1.html)
+
 <!--- 2023 --->
 ## Regression table
 This example shows how to create very similar regression tables with and without clustered standard errors in Stata and R.
