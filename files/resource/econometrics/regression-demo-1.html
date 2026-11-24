@@ -49,6 +49,18 @@ y: 11.5 10.2 10.8 8.1 7.4 6.0 5.1 3.2
 xrange: 0 16
 yrange: 0 14
 
+# Binary x: control (0) vs treatment (1)
+x: 0 0 0 0 0 0 0 1 1 1 1 1 1 1
+y: 3.2 3.9 5.3 5.9 4.6 2.5 6.6 6.3 7.6 5.6 8.3 9.0 7.0 10.2
+xrange: -0.5 1.5
+yrange: 0 12
+
+# Two-value x (x = 2 or 5)
+x: 2 2 2 2 2 5 5 5 5 5
+y: 9.0 7.6 10.4 8.3 6.8 5.1 6.3 3.8 4.6 2.9
+xrange: 0 7
+yrange: 0 12
+
 # Tiny set (n = 4)
 x: 1 3 5 7
 y: 2 5 4 8
@@ -112,6 +124,11 @@ main.band{padding-top:clamp(18px,2.4vw,28px)}
 .frac b{font-size:19px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .se b{font-size:17px}
 #b1line{font-size:14px;font-variant-numeric:tabular-nums}
+.cond[hidden]{display:none}
+.cond{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:8px}
+.cond h2{font-size:18px;margin:0 0 2px}
+.cond .frac b{font-size:19px}
+.cond .note{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
 .sel{border-top:1px solid var(--line);padding-top:14px}
 .sel h2{font-size:18px;margin:0 0 8px}
 .sel .row{display:flex;justify-content:space-between;gap:10px;padding:4px 0;font-variant-numeric:tabular-nums}
@@ -200,6 +217,7 @@ svg text{font-family:"Red Hat Text",system-ui,sans-serif}
     <div><span class="k">RSS, Σ(y − ŷ)²</span><b id="ssr" class="hot"></b></div>
     <div><span class="k">TSS, Σ(y − ȳ)²</span><b id="sst"></b></div>
    </div>
+   <div class="cond" id="cond" hidden></div>
    <div class="sel" id="sel"></div>
   </aside>
  </div>
@@ -330,8 +348,10 @@ function draw(S){
  }
  g+='</g>';
  const r=narrow?8:9;
- g+=X.map((x,i)=>{const px=sx(x),py=sy(Y[i]),left=px>W-110;
-  return `<text class="lbl" x="${px+(left?-14:14)}" y="${py-10}" text-anchor="${left?'end':'start'}">(${fx(x)}, ${f1(Y[i])})</text>`}).join('');
+ const L=X.map((x,i)=>{const px=sx(x),left=px>W-110;return{i,left,lx:px+(left?-14:14),ly:sy(Y[i])+4.5}});
+ L.slice().sort((a,b)=>a.ly-b.ly).forEach((a,k,arr)=>{for(let j=0;j<k;j++){const b=arr[j];
+  if(a.left===b.left&&Math.abs(a.lx-b.lx)<70&&a.ly-b.ly<14)a.ly=b.ly+14}});
+ g+=L.map(({i,left,lx,ly})=>`<text class="lbl" x="${lx}" y="${ly}" text-anchor="${left?'end':'start'}">(${fx(X[i])}, ${f1(Y[i])})</text>`).join('');
  g+=X.map((x,i)=>`<circle class="p${i===sel?' on':''}" style="cursor:${CUR[mode]}" data-i="${i}" cx="${sx(x)}" cy="${sy(Y[i])}" r="${i===drag?.i?r+3:r}" tabindex="0" role="button" aria-label="Point ${i+1}, x ${fx(x)}, y ${f1(Y[i])}"/>`).join('');
  svg.innerHTML=g;
 }
@@ -347,6 +367,14 @@ function render(){
  $('r').textContent=isNaN(S.r)?'—':neg(f3(S.r));
  $('sxy').textContent=neg(f3(S.sxy));$('sxx').textContent=f3(S.sxx);
  $('seh').textContent=isNaN(S.seH)?'—':f3(S.seH);$('ser').textContent=isNaN(S.seR)?'—':f3(S.seR);
+ const vals=[...new Set(X)].sort((a,b)=>a-b);
+ if(vals.length===2){
+  const grp=vals.map(v=>{const ys=Y.filter((_,i)=>X[i]===v);return{v,n:ys.length,m:ys.reduce((a,b)=>a+b,0)/ys.length}});
+  const[a,b]=grp,diff=b.m-a.m;
+  $('cond').innerHTML=`<h2>Conditional means of y</h2>`+grp.map(g=>`<div class="frac"><span class="k">Mean of y given x = ${fx(g.v)} (${g.n} point${g.n>1?'s':''})</span><b>${neg(f3(g.m))}</b></div>`).join('')+
+   `<div class="note">Difference: ${neg(f3(b.m))} − ${neg(f3(a.m))} = ${neg(f3(diff))}, which equals slope × (${fx(b.v)} − ${fx(a.v)}) = ${neg(f3(S.b1))} × ${fx(b.v-a.v)}</div>`;
+  $('cond').hidden=false;
+ }else $('cond').hidden=true;
  $('b1line').textContent=S.ok?`Slope = ${neg(f3(S.sxy))} ÷ ${f3(S.sxx)} = ${neg(f3(S.b1))}`:'Slope undefined: the denominator is 0';
  $('n').textContent=S.n;$('xbar').textContent=f2(S.xb);$('ybar').textContent=f2(S.yb);$('sst').textContent=f3(S.sst);
  const v=n=>S.ok?neg(f2(n)):'—';
