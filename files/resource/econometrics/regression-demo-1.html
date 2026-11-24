@@ -75,9 +75,9 @@ yrange: 0 10
    COLOUR and TYPE: oxford blue band, white panels, magenta for the fit and SSR; Red Hat Display + Text.
    LAYOUT: title band, then plot left / live dashboard right; stacks under 900px; point table and data editor below. */
 :root{color-scheme:light dark;
- --bg:light-dark(#eef1f7,#070f26);--panel:light-dark(#ffffff,#0d1a3d);--ink:light-dark(#0b1f4b,#e8ecf7);
- --muted:light-dark(#55618a,#9aa6c8);--line:light-dark(#d6dcea,#22325f);--band:#500082;
- --hot:#e0115f;--pt:light-dark(#0b1f4b,#e8ecf7);--x:#2a7de1;--y:#e08a00;--grid:light-dark(#edf0f6,#142454)}
+ --bg:light-dark(#f4f4f4,#280050);--panel:light-dark(#ffffff,#000000);--ink:light-dark(#000000,#ffffff);
+ --muted:light-dark(#5e5e5e,#b5b5b5);--line:light-dark(#dcdcdc,#3a3a3a);--band:#500082;
+ --hot:#FF7800;--hotText:light-dark(#C86914,#FF7800);--pt:light-dark(#000000,#ffffff);--x:light-dark(#280050,#FFBE0A);--y:#B1008E;--grid:light-dark(#eeeeee,#1e1e1e)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Red Hat Text",system-ui,sans-serif;overflow-x:clip}
@@ -85,22 +85,22 @@ h1,h2,.big,.eq{font-family:"Red Hat Display",system-ui,sans-serif}
 .band{padding:clamp(22px,3vw,40px) max(4vw,16px)}
 header.band{background:var(--band);color:#fff;padding-bottom:clamp(18px,2.4vw,28px)}
 h1{margin:0;font-size:clamp(30px,4vw,46px);line-height:1.05;text-wrap:balance;font-weight:700}
-header p{margin:.5em 0 0;max-width:68ch;color:#e6d6f2}
+header p{margin:.5em 0 0;max-width:68ch;color:#ffffff}
 .wrap{max-width:1240px;margin:0 auto}
 .bar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:18px}
-.bar label,.lab{font-size:14px;color:#e6d6f2}
+.bar label,.lab{font-size:14px;color:#ffffff}
 select,button{font:inherit;font-size:16px;min-height:44px;border-radius:8px;padding:0 14px;cursor:pointer}
 select{background:#fff;color:#500082;border:0}
-button{background:transparent;color:#fff;border:1.5px solid #a27cc4}
-button.go{background:var(--hot);border-color:var(--hot);font-weight:600}
+button{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+button.go{background:var(--hot);border-color:var(--hot);color:#280050;font-weight:700}
 button:focus-visible,select:focus-visible,.p:focus-visible,.seg input:focus-visible+span,textarea:focus-visible{outline:3px solid var(--hot);outline-offset:2px}
-.chk{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:15px;color:#f1e8f8;cursor:pointer}
+.chk{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:15px;color:#ffffff;cursor:pointer}
 .chk input{width:18px;height:18px;accent-color:var(--hot)}
-.seg{display:inline-flex;border:1.5px solid #a27cc4;border-radius:8px;overflow:hidden}
+.seg{display:inline-flex;border:1.5px solid rgba(255,255,255,.5);border-radius:8px;overflow:hidden}
 .seg label{position:relative;cursor:pointer}
 .seg input{position:absolute;opacity:0}
-.seg span{display:flex;align-items:center;min-height:41px;padding:0 13px;font-size:15px;color:#f1e8f8;white-space:nowrap}
-.seg label+label span{border-left:1.5px solid #a27cc4}
+.seg span{display:flex;align-items:center;min-height:41px;padding:0 13px;font-size:15px;color:#ffffff;white-space:nowrap}
+.seg label+label span{border-left:1.5px solid rgba(255,255,255,.5)}
 .seg input:checked+span{background:#fff;color:#500082;font-weight:600}
 .ob{text-decoration:overline;text-decoration-thickness:.08em;text-underline-offset:0}
 main.band{padding-top:clamp(18px,2.4vw,28px)}
@@ -118,7 +118,7 @@ main.band{padding-top:clamp(18px,2.4vw,28px)}
 .stats b{display:block;font-size:19px;font-variant-numeric:tabular-nums}
 .top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
 .nbox{text-align:right}
-.stats b.hot{color:var(--hot)}
+.stats b.hot{color:var(--hotText)}
 .slope{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:flex;flex-direction:column;gap:8px}
 .frac{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .frac b{font-size:19px;font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -139,7 +139,7 @@ table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font
 th,td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
 th{font-weight:600;color:var(--muted);font-size:13px}
 th:first-child,td:first-child{text-align:left}
-tr.on td{background:light-dark(#fde7ef,#3a0f24)}
+tr.on td{background:light-dark(#fff0e2,#3d2108)}
 tfoot td{font-weight:700;border-bottom:0}
 tbody tr{cursor:pointer}
 .tbl{margin-top:20px;padding:6px 8px 10px}
@@ -151,8 +151,8 @@ tbody tr{cursor:pointer}
 .ed textarea{width:100%;min-height:300px;font:15px/1.5 ui-monospace,Menlo,Consolas,monospace;padding:12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 .ed .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;align-items:center}
 .ed button{color:var(--ink);border-color:var(--line)}
-.ed button.go{color:#fff}
-.msg{font-size:15px}.msg.bad{color:var(--hot);font-weight:600}
+.ed button.go{color:#280050}
+.msg{font-size:15px}.msg.bad{color:var(--hotText);font-weight:600}
 svg text{font-family:"Red Hat Text",system-ui,sans-serif}
 .ax{stroke:var(--muted);stroke-width:1}.gl{stroke:var(--grid);stroke-width:1}
 .tk{fill:var(--muted);font-size:12px}
