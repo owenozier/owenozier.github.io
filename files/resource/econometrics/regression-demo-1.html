@@ -161,12 +161,12 @@ svg text{font-family:"Red Hat Text",system-ui,sans-serif}
 .res{stroke:var(--hot);stroke-width:1.5;opacity:.55;stroke-dasharray:3 3}
 .p{fill:var(--pt);stroke:var(--panel);stroke-width:2.5;transition:r .12s}
 .p.on{fill:var(--hot)}
-.lbl{fill:var(--ink);font-size:12.5px;font-weight:500;paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
+.lbl{pointer-events:none;fill:var(--ink);font-size:12.5px;font-weight:500;paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
 .dx{stroke:var(--x);stroke-width:3}.dy{stroke:var(--y);stroke-width:3}
 .dxl{fill:var(--x);font-size:12.5px;font-weight:700;paint-order:stroke;stroke:var(--panel);stroke-width:4px}
 .dyl{fill:var(--y);font-size:12.5px;font-weight:700;paint-order:stroke;stroke:var(--panel);stroke-width:4px}
 @media(prefers-reduced-motion:reduce){.p{transition:none}}
-@media(max-width:600px){.fig{min-height:380px}th,td{padding:7px 8px;font-size:13px}}
+@media(max-width:600px){.fig{min-height:460px}.lbl{font-size:11.5px}th,td{padding:7px 8px;font-size:13px}}
 </style>
 </head>
 <body>
@@ -316,6 +316,7 @@ const ix=px=>{const[a,b]=DEMOS[D].xr;return a+(px-M.l)/(W-M.l-M.r)*(b-a)};
 const iy=py=>{const[a,b]=DEMOS[D].yr;return a+(H-M.b-py)/(H-M.t-M.b)*(b-a)};
 function ticks(a,b,max){const span=b-a,raw=span/max,p=10**Math.floor(Math.log10(raw));
  const step=[1,2,5,10].map(m=>m*p).find(s=>s>=raw);const out=[];for(let v=Math.ceil(a/step)*step;v<=b+1e-9;v+=step)out.push(+v.toFixed(6));return out}
+const COARSE=matchMedia('(pointer: coarse)').matches;
 const CUR={v:'ns-resize',h:'ew-resize',b:'move'};
 
 function draw(S){
@@ -346,12 +347,12 @@ function draw(S){
   g+=`<text class="dyl" x="${px+(right?10:-10)}" y="${(my+py)/2+4}" text-anchor="${right?'start':'end'}">y − ȳ = ${neg(f2(Y[sel]-S.yb))}</text>`;
  }
  g+='</g>';
- const r=narrow?8:9;
- const L=X.map((x,i)=>{const px=sx(x),left=px>W-110;return{i,left,lx:px+(left?-14:14),ly:sy(Y[i])+4.5}});
+ const r=COARSE?9.5:narrow?8:9;
+ const L=X.map((x,i)=>{const px=sx(x),left=px>W-110;return{i,left,lx:px+(left?-(r+6):r+6),ly:sy(Y[i])+4.5}});
  L.slice().sort((a,b)=>a.ly-b.ly).forEach((a,k,arr)=>{for(let j=0;j<k;j++){const b=arr[j];
   if(a.left===b.left&&Math.abs(a.lx-b.lx)<70&&a.ly-b.ly<14)a.ly=b.ly+14}});
- g+=L.map(({i,left,lx,ly})=>`<text class="lbl" x="${lx}" y="${ly}" text-anchor="${left?'end':'start'}">(${fx(X[i])}, ${f1(Y[i])})</text>`).join('');
  g+=X.map((x,i)=>`<circle class="p${i===sel?' on':''}" style="cursor:${CUR[mode]}" data-i="${i}" cx="${sx(x)}" cy="${sy(Y[i])}" r="${i===drag?.i?r+3:r}" tabindex="0" role="button" aria-label="Point ${i+1}, x ${fx(x)}, y ${f1(Y[i])}"/>`).join('');
+ g+=L.map(({i,left,lx,ly})=>`<text class="lbl" x="${lx}" y="${ly}" text-anchor="${left?'end':'start'}">(${fx(X[i])}, ${f1(Y[i])})</text>`).join('');
  svg.innerHTML=g;
 }
 
@@ -401,10 +402,17 @@ function setMode(m){mode=m;$('hint').textContent=HINTS[m];render()}
 document.querySelectorAll('input[name=mode]').forEach(r=>r.addEventListener('change',e=>setMode(e.target.value)));
 
 svg.addEventListener('pointerdown',e=>{
- const t=e.target.closest('.p');if(!t)return;
+ // Grab the nearest point within reach: about a fingertip on touch screens, smaller with a mouse.
+ const rect=svg.getBoundingClientRect(),k=W/rect.width;
+ const mx=(e.clientX-rect.left)*k,my=(e.clientY-rect.top)*k;
+ const reach=(e.pointerType==='mouse'?16:34)*k;
+ let best=-1,bd=Infinity;
+ X.forEach((x,i)=>{const d=Math.hypot(sx(x)-mx,sy(Y[i])-my);if(d<bd){bd=d;best=i}});
+ if(best<0||bd>reach)return;
  e.preventDefault();
- drag={i:+t.dataset.i,x0:e.clientX,y0:e.clientY,moved:false,id:e.pointerId};
- svg.setPointerCapture(e.pointerId);render();
+ drag={i:best,x0:e.clientX,y0:e.clientY,moved:false,id:e.pointerId};
+ try{svg.setPointerCapture(e.pointerId)}catch(_){}
+ render();
 });
 svg.addEventListener('pointermove',e=>{
  if(!drag||e.pointerId!==drag.id)return;
