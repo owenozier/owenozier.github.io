@@ -69,117 +69,130 @@ yrange: 0 10
 </script>
 
 <style>
-/* VOICE: a clear, calm teaching instrument for a stats classroom.
-   IDEA: a lab bench plot you can push with your finger; the numbers answer back instantly.
-   PICTURE: the scatterplot itself, large, with the fitted line and deviation segments.
-   COLOUR and TYPE: oxford blue band, white panels, magenta for the fit and SSR; Red Hat Display + Text.
-   LAYOUT: title band, then plot left / live dashboard right; stacks under 900px; point table and data editor below. */
-:root{color-scheme:light dark;
- --bg:light-dark(#f4f4f4,#280050);--panel:light-dark(#ffffff,#000000);--ink:light-dark(#000000,#ffffff);
- --muted:light-dark(#5e5e5e,#b5b5b5);--line:light-dark(#dcdcdc,#3a3a3a);--band:#500082;
- --hot:#FF7800;--hotText:light-dark(#C86914,#FF7800);--pt:light-dark(#000000,#ffffff);--x:light-dark(#280050,#FFBE0A);--y:#B1008E;--grid:light-dark(#eeeeee,#1e1e1e)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+/* Drag-the-Points Regression: a teaching demo.
+   Colours follow the Williams College palette (identity.williams.edu):
+   Purple #500082 header, Orange #FF7800 fit line and residuals, Ocher #C86914 orange text,
+   Dark Purple #280050 / Gold #FFBE0A for x − x̄, Magenta #B1008E for y − ȳ.
+   Layout: header band; plot left and statistics right (stacked under 900px); point table; data editor. */
+
+/* Colour tokens. Light values first; dark values apply when the device is in dark mode
+   (unless the viewer forces light) or when the viewer forces dark. The dark block is written
+   twice because a media query can't be combined with a selector. */
+:root{color-scheme:light;
+ --bg:#f4f4f4;--panel:#fff;--ink:#000;--muted:#5e5e5e;--line:#dcdcdc;--grid:#eee;--pt:#000;
+ --x:#280050;--hotText:#C86914;--selbg:#fff0e2;
+ --band:#500082;--hot:#FF7800;--y:#B1008E}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;
+ --bg:#280050;--panel:#000;--ink:#fff;--muted:#b5b5b5;--line:#3a3a3a;--grid:#1e1e1e;--pt:#fff;
+ --x:#FFBE0A;--hotText:#FF7800;--selbg:#3d2108}}
+:root[data-theme=dark]{color-scheme:dark;
+ --bg:#280050;--panel:#000;--ink:#fff;--muted:#b5b5b5;--line:#3a3a3a;--grid:#1e1e1e;--pt:#fff;
+ --x:#FFBE0A;--hotText:#FF7800;--selbg:#3d2108}
+
 *{box-sizing:border-box;min-width:0}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Red Hat Text",system-ui,sans-serif;overflow-x:clip}
-h1,h2,.big,.eq{font-family:"Red Hat Display",system-ui,sans-serif}
-.band{padding:clamp(22px,3vw,40px) max(4vw,16px)}
-header.band{background:var(--band);color:#fff;padding-bottom:clamp(18px,2.4vw,28px)}
-h1{margin:0;font-size:clamp(30px,4vw,46px);line-height:1.05;text-wrap:balance;font-weight:700}
-header p{margin:.5em 0 0;max-width:68ch;color:#ffffff}
+h1,h2,.eq,summary{font-family:"Red Hat Display",system-ui,sans-serif}
 .wrap{max-width:1240px;margin:0 auto}
-.bar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:18px}
-.bar label,.lab{font-size:14px;color:#ffffff}
+.band{padding:clamp(22px,3vw,40px) max(4vw,16px)}
+main.band{padding-top:clamp(18px,2.4vw,28px)}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Header and controls */
+header{background:var(--band);color:#fff}
+header.band{padding-bottom:clamp(18px,2.4vw,28px)}
+h1{margin:0;font-size:clamp(30px,4vw,46px);line-height:1.05;text-wrap:balance}
+header p{margin:.5em 0 0;max-width:68ch}
+.bar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-top:18px;font-size:15px}
 select,button{font:inherit;font-size:16px;min-height:44px;border-radius:8px;padding:0 14px;cursor:pointer}
-select{background:#fff;color:#500082;border:0}
-button{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+select{background:#fff;color:var(--band);border:0}
+button{background:transparent;color:inherit;border:1.5px solid rgba(255,255,255,.5)}
 button.go{background:var(--hot);border-color:var(--hot);color:#280050;font-weight:700}
-button:focus-visible,select:focus-visible,.p:focus-visible,.seg input:focus-visible+span,textarea:focus-visible{outline:3px solid var(--hot);outline-offset:2px}
-.chk{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:15px;color:#ffffff;cursor:pointer}
+:focus-visible{outline:3px solid var(--hot);outline-offset:2px}
+.chk{display:inline-flex;align-items:center;gap:6px;min-height:44px;cursor:pointer}
 .chk input{width:18px;height:18px;accent-color:var(--hot)}
+/* Segmented control: real radio buttons, visually hidden, with the label text styled as the button */
 .seg{display:inline-flex;border:1.5px solid rgba(255,255,255,.5);border-radius:8px;overflow:hidden}
 .seg label{position:relative;cursor:pointer}
 .seg input{position:absolute;opacity:0}
-.seg span{display:flex;align-items:center;min-height:41px;padding:0 13px;font-size:15px;color:#ffffff;white-space:nowrap}
+.seg span{display:flex;align-items:center;min-height:41px;padding:0 13px;white-space:nowrap}
 .seg label+label span{border-left:1.5px solid rgba(255,255,255,.5)}
-.seg input:checked+span{background:#fff;color:#500082;font-weight:600}
-.ob{text-decoration:overline;text-decoration-thickness:.08em;text-underline-offset:0}
-main.band{padding-top:clamp(18px,2.4vw,28px)}
+.seg input:checked+span{background:#fff;color:var(--band);font-weight:600}
+.seg input:focus-visible+span{outline:3px solid var(--hot);outline-offset:-3px}
+/* x̄ drawn as x with an overline: "x + combining macron" sits off-centre in many fonts */
+.ob{text-decoration:overline;text-decoration-thickness:.08em}
+
+/* Plot and statistics panel */
 .grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px}
 @media(max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px}
-.fig{position:relative;min-height:480px;touch-action:none}
-.fig>svg{position:absolute;inset:0;width:100%;height:100%;user-select:none}
+.fig{position:relative;min-height:480px;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%}
 .hint{font-size:14px;color:var(--muted);margin:10px 4px 0}
 .dash{padding:20px;display:flex;flex-direction:column;gap:16px}
+.dash>section{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line);padding-top:14px}
+.dash h2{font-size:18px;margin:0}
 .k{font-size:13px;color:var(--muted)}
-.big{font-size:clamp(34px,4vw,44px);line-height:1.05;font-weight:700;color:var(--hot);font-variant-numeric:tabular-nums}
-.eq{font-size:21px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
-.stats b{display:block;font-size:19px;font-variant-numeric:tabular-nums}
+.eq{font-size:21px;font-weight:700}
 .top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
-.nbox{text-align:right}
-.slope{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:flex;flex-direction:column;gap:8px}
-.frac{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.frac b{font-size:19px;font-variant-numeric:tabular-nums;white-space:nowrap}
-.se b{font-size:17px}
-#b1line{font-size:14px;font-variant-numeric:tabular-nums}
-.cond[hidden]{display:none}
-.cond{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:8px}
-.cond h2{font-size:18px;margin:0 0 2px}
-.cond .frac b{font-size:19px}
-.cond .note{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
-.sel{border-top:1px solid var(--line);padding-top:14px}
-.sel h2{font-size:18px;margin:0 0 8px}
-.sel .row{display:flex;justify-content:space-between;gap:10px;padding:4px 0;font-variant-numeric:tabular-nums}
-.sel .row span:last-child{font-weight:600;white-space:nowrap}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.row b,.stats b{font-size:19px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;border-top:1px solid var(--line);padding-top:14px}
+.stats b{display:block}
+.note{font-size:14px;color:var(--muted)}
+.sel .row b{font-size:16px}
 .sw{display:inline-block;width:12px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
-.empty{color:var(--muted);font-size:15px;margin:0}
-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:15px}
-th,td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
-th{font-weight:600;color:var(--muted);font-size:13px}
-th:first-child,td:first-child{text-align:left}
-tr.on td{background:light-dark(#fff0e2,#3d2108)}
-tfoot td{font-weight:700;border-bottom:0}
-tbody tr{cursor:pointer}
+[hidden]{display:none!important}
+
+/* Table and editor */
 .tbl{margin-top:20px;padding:6px 8px 10px}
-.tbl h2,.ed h2{font-size:18px;margin:12px 12px 6px}
+.tbl h2{font-size:18px;margin:12px 12px 6px}
 .scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted);font-size:13px;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+tbody tr{cursor:pointer}
+tr.on td{background:var(--selbg)}
+tfoot td{font-weight:700;border-bottom:0}
 .ed{margin-top:20px;padding:8px 12px 16px}
-.ed summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-family:"Red Hat Display";font-weight:700;font-size:18px;padding:0 4px}
+.ed summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:700;font-size:18px;padding:0 4px}
 .ed p{margin:4px 4px 10px;color:var(--muted);font-size:15px;max-width:75ch}
 .ed textarea{width:100%;min-height:300px;font:15px/1.5 ui-monospace,Menlo,Consolas,monospace;padding:12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
-.ed .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;align-items:center}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;align-items:center}
 .ed button{color:var(--ink);border-color:var(--line)}
 .ed button.go{color:#280050}
-.msg{font-size:15px}.msg.bad{color:var(--hotText);font-weight:600}
-svg text{font-family:"Red Hat Text",system-ui,sans-serif}
-.ax{stroke:var(--muted);stroke-width:1}.gl{stroke:var(--grid);stroke-width:1}
+.msg.bad{color:var(--hotText);font-weight:600}
+
+/* SVG plot marks */
+svg text{font-family:"Red Hat Text",system-ui,sans-serif;font-size:12.5px}
+.ax{stroke:var(--muted)}.gl{stroke:var(--grid)}
 .tk{fill:var(--muted);font-size:12px}
 .fit{stroke:var(--hot);stroke-width:3;stroke-linecap:round}
+.res{stroke:var(--hot);stroke-width:1.5;opacity:.55;stroke-dasharray:3 3}
 .mean{stroke:var(--muted);stroke-width:1.2;stroke-dasharray:5 5}
 .meanl{fill:var(--muted);font-size:12px;font-weight:600}
-.res{stroke:var(--hot);stroke-width:1.5;opacity:.55;stroke-dasharray:3 3}
-.p{fill:var(--pt);stroke:var(--panel);stroke-width:2.5;transition:r .12s}
+.p{fill:var(--pt);stroke:var(--panel);stroke-width:2.5}
 .p.on{fill:var(--hot)}
-.lbl{pointer-events:none;fill:var(--ink);font-size:12.5px;font-weight:500;paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round}
 .dx{stroke:var(--x);stroke-width:3}.dy{stroke:var(--y);stroke-width:3}
-.dxl{fill:var(--x);font-size:12.5px;font-weight:700;paint-order:stroke;stroke:var(--panel);stroke-width:4px}
-.dyl{fill:var(--y);font-size:12.5px;font-weight:700;paint-order:stroke;stroke:var(--panel);stroke-width:4px}
-@media(prefers-reduced-motion:reduce){.p{transition:none}}
-@media(max-width:600px){.fig{min-height:460px}.lbl{font-size:11.5px}th,td{padding:7px 8px;font-size:13px}}
+/* Text with a halo in the panel colour so it stays readable over lines and dots */
+.lbl,.dxl,.dyl{paint-order:stroke;stroke:var(--panel);stroke-width:4px;stroke-linejoin:round;pointer-events:none}
+.lbl{fill:var(--ink);font-weight:500}
+.dxl{fill:var(--x);font-weight:700}.dyl{fill:var(--y);font-weight:700}
+
+@media(max-width:600px){.fig{min-height:460px}svg .lbl{font-size:11.5px}th,td{padding:7px 8px;font-size:13px}}
 </style>
 </head>
 <body>
 <header class="band"><div class="wrap">
  <h1>Drag the points, watch the least-squares line move</h1>
- <p>Drag any point. The fitted line and the sum of squared residuals update as you go. Click a point to see its deviations from the means.</p>
+ <p>Drag any point. The fitted line and the statistics update as you go. Click a point to see its deviations from the means.</p>
  <div class="bar">
   <label for="demo">Data set</label>
   <select id="demo"></select>
   <button class="go" id="reset" type="button">Reset the points</button>
  </div>
  <div class="bar">
-  <span class="lab" id="movelab">Point movement</span>
+  <span id="movelab">Point movement</span>
   <div class="seg" role="radiogroup" aria-labelledby="movelab">
    <label><input type="radio" name="mode" value="v" checked><span>Vertical only</span></label>
    <label><input type="radio" name="mode" value="h"><span>Horizontal only</span></label>
@@ -193,37 +206,37 @@ svg text{font-family:"Red Hat Text",system-ui,sans-serif}
 <main class="band"><div class="wrap">
  <div class="grid">
   <div>
-   <div class="card fig" id="fig"><svg id="plot" role="img" aria-label="Scatterplot with regression line"></svg></div>
+   <div class="card fig" id="fig"><svg id="plot" role="group" aria-label="Scatterplot with regression line. Tab to a point and use the arrow keys to move it."></svg></div>
    <p class="hint" id="hint"></p>
   </div>
-  <aside class="card dash" aria-live="polite">
+  <aside class="card dash">
    <div class="top">
-    <div><div class="k">Fitted line</div><div class="eq" id="eq"></div></div>
-    <div class="nbox"><div class="k">n</div><div class="eq" id="n"></div></div>
+    <div><div class="k">Fitted line</div><div class="eq num" id="eq"></div></div>
+    <div style="text-align:right"><div class="k">n</div><div class="eq num" id="n"></div></div>
    </div>
-   <div class="slope">
-    <div class="frac"><span class="k">Numerator, Σ(y − ȳ)(x − <span class="ob">x</span>)</span><b id="sxy"></b></div>
-    <div class="frac"><span class="k">Denominator, Σ(x − <span class="ob">x</span>)²</span><b id="sxx"></b></div>
-    <div class="k" id="b1line"></div>
-    <div class="frac se" title="√[ (RSS / (n − 2)) / Σ(x − x̄)² ]"><span class="k">SE of slope, homoskedastic</span><b id="seh"></b></div>
-    <div class="frac se" title="√[ (1/n) · ((1/(n − 2)) Σ(x − x̄)² û²) / ((1/n) Σ(x − x̄)²)² ]"><span class="k">SE of slope, robust (HC1)</span><b id="ser"></b></div>
-   </div>
+   <section>
+    <div class="row"><span class="k">Numerator, Σ(y − ȳ)(x − <span class="ob">x</span>)</span><b class="num" id="sxy"></b></div>
+    <div class="row"><span class="k">Denominator, Σ(x − <span class="ob">x</span>)²</span><b class="num" id="sxx"></b></div>
+    <div class="note num" id="b1line"></div>
+    <div class="row" title="√[ (RSS / (n − 2)) / Σ(x − x̄)² ]"><span class="k">SE of slope, homoskedastic</span><b class="num" id="seh"></b></div>
+    <div class="row" title="√[ (1/n) · ((1/(n − 2)) Σ(x − x̄)² û²) / ((1/n) Σ(x − x̄)²)² ]"><span class="k">SE of slope, robust (HC1)</span><b class="num" id="ser"></b></div>
+   </section>
    <div class="stats">
-    <div><span class="k"><span class="ob">x</span></span><b id="xbar"></b></div>
-    <div><span class="k">ȳ</span><b id="ybar"></b></div>
-    <div><span class="k">R²</span><b id="r2"></b></div>
-    <div><span class="k">Correlation r</span><b id="r"></b></div>
-    <div><span class="k">RSS, Σ(y − ŷ)²</span><b id="ssr"></b></div>
-    <div><span class="k">TSS, Σ(y − ȳ)²</span><b id="sst"></b></div>
+    <div><span class="k"><span class="ob">x</span></span><b class="num" id="xbar"></b></div>
+    <div><span class="k">ȳ</span><b class="num" id="ybar"></b></div>
+    <div><span class="k">R²</span><b class="num" id="r2"></b></div>
+    <div><span class="k">Correlation r</span><b class="num" id="r"></b></div>
+    <div><span class="k">RSS, Σ(y − ŷ)²</span><b class="num" id="rss"></b></div>
+    <div><span class="k">TSS, Σ(y − ȳ)²</span><b class="num" id="tss"></b></div>
    </div>
-   <div class="cond" id="cond" hidden></div>
-   <div class="sel" id="sel"></div>
+   <section id="cond" hidden></section>
+   <section class="sel" id="sel"></section>
   </aside>
  </div>
 
  <section class="card tbl">
   <h2>Every point</h2>
-  <div class="scroll"><table>
+  <div class="scroll"><table class="num">
    <thead><tr><th>Point</th><th>x</th><th>y</th><th>x − <span class="ob">x</span></th><th>y − ȳ</th><th>(y − ȳ)(x − <span class="ob">x</span>)</th><th>(x − <span class="ob">x</span>)²</th><th>ŷ</th><th>y − ŷ</th><th>(y − ŷ)²</th></tr></thead>
    <tbody id="tb"></tbody>
    <tfoot id="tf"></tfoot>
@@ -245,212 +258,314 @@ svg text{font-family:"Red Hat Text",system-ui,sans-serif}
 
 <script>
 {
-const $=id=>document.getElementById(id);
-const BUILTIN=$('datasets').textContent.replace(/^\n+/,'').replace(/\s+$/,'')+'\n';
-const KEY='regdemo-datasets';
-const OB='<span class="ob">x</span>',OBS='<tspan text-decoration="overline">x</tspan>';
-const svg=$('plot'),fig=$('fig');
-let DEMOS=[],D=0,X=[],Y=[],sel=null,drag=null,W=0,H=0,mode='v';
+/* ======================= Setup and state ======================= */
+const $ = id => document.getElementById(id);
+const svg = $('plot'), fig = $('fig');
+const BUILTIN = $('datasets').textContent.trim() + '\n'; // the data block at the top of the file
+const STORE_KEY = 'regdemo-datasets';                   // where edited data sets are kept in this browser
+const XBAR_HTML = '<span class="ob">x</span>';           // x̄ (see the .ob note in the CSS)
+const XBAR_SVG = '<tspan text-decoration="overline">x</tspan>';
+const TOUCH = matchMedia('(pointer: coarse)').matches;   // phone or tablet
+const CURSOR = {v: 'ns-resize', h: 'ew-resize', b: 'move'};
+const HINTS = {
+  v: 'Drag a point up or down. Keyboard: Tab to a point, ↑ ↓ move it by 0.1 (hold Shift for 1), Enter selects it.',
+  h: 'Drag a point left or right. Keyboard: Tab to a point, ← → move it by 0.1 (hold Shift for 1), Enter selects it.',
+  b: 'Drag a point in any direction. Keyboard: Tab to a point, arrow keys move it by 0.1 (hold Shift for 1), Enter selects it.'
+};
 
-/* ---------- parse the plain-text data sets ---------- */
-function niceRange(v,pad){
- const lo=Math.min(...v),hi=Math.max(...v),span=(hi-lo)||Math.abs(hi)||1;
- let a=lo-span*pad,b=hi+span*pad;
- if(lo>=0&&a<0||lo>=0&&lo<span*0.6)a=0;
- const step=span>20?5:span>8?2:1;
- return[Math.floor(a/step)*step,Math.ceil(b/step)*step];
-}
-function parse(txt){
- const out=[],errs=[];let cur=null;
- const nums=(s,ln)=>{const a=s.trim().split(/[\s,]+/).filter(Boolean).map(Number);
-  if(a.some(isNaN))errs.push(`Line ${ln}: "${s.trim()}" has something that isn't a number.`);return a};
- txt.split(/\r?\n/).forEach((raw,k)=>{
-  const line=raw.trim(),ln=k+1;
-  if(!line||line.startsWith('//'))return;
-  if(line.startsWith('#')){cur={name:line.slice(1).trim()||`Data set ${out.length+1}`};out.push(cur);return}
-  const m=line.match(/^(x|y|xrange|yrange)\s*[:=]\s*(.*)$/i);
-  if(!m){errs.push(`Line ${ln}: didn't understand "${line}".`);return}
-  if(!cur){cur={name:`Data set ${out.length+1}`};out.push(cur)}
-  cur[m[1].toLowerCase()]=nums(m[2],ln);
- });
- out.forEach(d=>{
-  if(!d.x||!d.y){errs.push(`"${d.name}": needs both an x: line and a y: line.`);return}
-  if(d.x.length!==d.y.length)errs.push(`"${d.name}": ${d.x.length} x values but ${d.y.length} y values.`);
-  if(d.x.length<2)errs.push(`"${d.name}": needs at least 2 points.`);
-  for(const r of['xrange','yrange'])if(d[r]&&(d[r].length!==2||d[r][0]>=d[r][1]))errs.push(`"${d.name}": ${r} needs two numbers, low then high.`);
-  d.xr=d.xrange||niceRange(d.x,0.1);d.yr=d.yrange||niceRange(d.y,0.25);
- });
- if(!out.length)errs.push('No data sets found. Start each one with a # Name line.');
- return{sets:out,errs};
-}
-function useText(txt,quiet){
- const{sets,errs}=parse(txt);
- if(errs.length){$('msg').className='msg bad';$('msg').textContent=errs[0]+(errs.length>1?` (and ${errs.length-1} more)`:'');return false}
- DEMOS=sets;$('demo').innerHTML=DEMOS.map((d,i)=>`<option value="${i}">${d.name.replace(/</g,'&lt;')}</option>`).join('');
- load(0);if(!quiet){$('msg').className='msg';$('msg').textContent=`Loaded ${sets.length} data set${sets.length>1?'s':''}.`}
- return true;
+let sets = [];      // parsed data sets: {name, x, y, xr:[lo,hi], yr:[lo,hi]}
+let cur = 0;        // index of the data set on screen
+let X = [], Y = []; // the current (possibly dragged) coordinates
+let sel = null;     // index of the selected point, or null
+let drag = null;    // {i, id, x0, y0, moved} while a point is being dragged
+let mode = 'v';     // 'v' vertical, 'h' horizontal, 'b' both
+let W = 0, H = 0;   // plot size in pixels
+
+/* ======================= Number formatting ======================= */
+// d decimals, a proper minus sign, "—" for undefined values, and no "−0.00".
+const fmt = (v, d) => !Number.isFinite(v) ? '—'
+  : (Math.abs(v) < 0.5 * 10 ** -d ? 0 : v).toFixed(d).replace('-', '−');
+const fx = v => Number.isInteger(v) ? String(v) : fmt(v, 1); // x shown as "3", or "3.4" once dragged
+const sumOf = a => a.reduce((s, v) => s + v, 0);
+
+/* ======================= Reading the data sets ======================= */
+// Axis range when none is given: pad the data, start at 0 for non-negative data
+// that sits near 0, and round outward to a tidy step.
+function niceRange(v, pad) {
+  const lo = Math.min(...v), hi = Math.max(...v), span = hi - lo || Math.abs(hi) || 1;
+  let a = lo - span * pad;
+  const b = hi + span * pad, step = span > 20 ? 5 : span > 8 ? 2 : 1;
+  if (lo >= 0 && (a < 0 || lo < span * 0.6)) a = 0;
+  return [Math.floor(a / step) * step, Math.ceil(b / step) * step];
 }
 
-/* ---------- stats ---------- */
-const f1=v=>(Math.abs(v)<0.005?0:v).toFixed(1),f2=v=>(Math.abs(v)<0.0005?0:v).toFixed(2),f3=v=>v.toFixed(3);
-const neg=s=>String(s).replace(/^-/,'−');
-const fx=v=>Number.isInteger(v)?String(v):f1(v);
-function load(i){D=i;X=DEMOS[i].x.slice();Y=DEMOS[i].y.slice();sel=null;render()}
-function stats(){
- const n=X.length,xb=X.reduce((a,b)=>a+b)/n,yb=Y.reduce((a,b)=>a+b)/n;
- let sxx=0,sxy=0,syy=0;
- for(let i=0;i<n;i++){const dx=X[i]-xb,dy=Y[i]-yb;sxx+=dx*dx;sxy+=dx*dy;syy+=dy*dy}
- const ok=sxx>1e-12,b1=ok?sxy/sxx:NaN,b0=yb-b1*xb,yh=X.map(x=>b0+b1*x),res=Y.map((y,i)=>y-yh[i]);
- const ssr=ok?res.reduce((a,r)=>a+r*r,0):NaN;
- const okSE=ok&&n>2,seH=okSE?Math.sqrt(ssr/(n-2)/sxx):NaN;
- const meat=X.reduce((a,x,i)=>a+(x-xb)**2*res[i]**2,0);
- const seR=okSE?Math.sqrt((1/n)*(meat/(n-2))/((sxx/n)**2)):NaN;
- return{seH,seR,sxx,sxy,n,xb,yb,b1,b0,yh,res,ssr,ok,sst:syy,r2:ok&&syy>0?1-ssr/syy:NaN,r:ok&&syy>0?sxy/Math.sqrt(sxx*syy):NaN};
+// Turns the plain-text format into data sets, collecting readable error messages.
+function parse(txt) {
+  const out = [], errs = [];
+  let d = null;
+  txt.split(/\r?\n/).forEach((raw, k) => {
+    const line = raw.trim(), ln = k + 1;
+    if (!line || line.startsWith('//')) return;
+    if (line.startsWith('#')) { out.push(d = {name: line.slice(1).trim() || `Data set ${out.length + 1}`}); return; }
+    const m = line.match(/^(x|y|xrange|yrange)\s*[:=]\s*(.*)$/i);
+    if (!m) { errs.push(`Line ${ln}: didn't understand "${line}".`); return; }
+    if (!d) out.push(d = {name: `Data set ${out.length + 1}`});
+    const nums = m[2].split(/[\s,]+/).filter(Boolean).map(Number);
+    if (!nums.every(Number.isFinite)) errs.push(`Line ${ln}: "${m[2].trim()}" has something that isn't a number.`);
+    d[m[1].toLowerCase()] = nums;
+  });
+  for (const d of out) {
+    const bad = msg => errs.push(`"${d.name}": ${msg}`);
+    if (!d.x || !d.y) { bad('needs both an x: line and a y: line.'); continue; }
+    if (d.x.length !== d.y.length) bad(`${d.x.length} x values but ${d.y.length} y values.`);
+    if (d.x.length < 2) bad('needs at least 2 points.');
+    for (const [k, r] of [['x', 'xrange'], ['y', 'yrange']]) {
+      if (!d[r]) continue;
+      if (d[r].length !== 2 || d[r][0] >= d[r][1]) bad(`${r} needs two numbers, low then high.`);
+      else if (d[k].some(v => v < d[r][0] || v > d[r][1])) bad(`some ${k} values fall outside ${r} ${d[r].join(' to ')}.`);
+    }
+    d.xr = d.xrange || niceRange(d.x, 0.1);
+    d.yr = d.yrange || niceRange(d.y, 0.25); // extra headroom so points can be dragged up and down
+  }
+  if (!out.length) errs.push('No data sets found. Start each one with a # Name line.');
+  return {out, errs};
 }
 
-/* ---------- drawing ---------- */
-const M={l:46,r:18,t:18,b:40};
-const sx=x=>{const[a,b]=DEMOS[D].xr;return M.l+(x-a)/(b-a)*(W-M.l-M.r)};
-const sy=y=>{const[a,b]=DEMOS[D].yr;return H-M.b-(y-a)/(b-a)*(H-M.t-M.b)};
-const ix=px=>{const[a,b]=DEMOS[D].xr;return a+(px-M.l)/(W-M.l-M.r)*(b-a)};
-const iy=py=>{const[a,b]=DEMOS[D].yr;return a+(H-M.b-py)/(H-M.t-M.b)*(b-a)};
-function ticks(a,b,max){const span=b-a,raw=span/max,p=10**Math.floor(Math.log10(raw));
- const step=[1,2,5,10].map(m=>m*p).find(s=>s>=raw);const out=[];for(let v=Math.ceil(a/step)*step;v<=b+1e-9;v+=step)out.push(+v.toFixed(6));return out}
-const COARSE=matchMedia('(pointer: coarse)').matches;
-const CUR={v:'ns-resize',h:'ew-resize',b:'move'};
+function showMsg(text, isError) { $('msg').textContent = text; $('msg').className = 'msg' + (isError ? ' bad' : ''); }
 
-function draw(S){
- W=fig.clientWidth;H=fig.clientHeight;if(!W||!H||!DEMOS.length)return;
- svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
- const d=DEMOS[D],narrow=W<520;
- const xt=ticks(d.xr[0],d.xr[1],narrow?5:10),yt=ticks(d.yr[0],d.yr[1],narrow?5:8);
- let g=`<defs><clipPath id="cp"><rect x="${M.l}" y="${M.t}" width="${W-M.l-M.r}" height="${H-M.t-M.b}"/></clipPath></defs>`;
- g+=xt.map(v=>`<line class="gl" x1="${sx(v)}" x2="${sx(v)}" y1="${M.t}" y2="${H-M.b}"/><text class="tk" x="${sx(v)}" y="${H-M.b+18}" text-anchor="middle">${v}</text>`).join('');
- g+=yt.map(v=>`<line class="gl" x1="${M.l}" x2="${W-M.r}" y1="${sy(v)}" y2="${sy(v)}"/><text class="tk" x="${M.l-8}" y="${sy(v)+4}" text-anchor="end">${v}</text>`).join('');
- g+=`<line class="ax" x1="${M.l}" x2="${W-M.r}" y1="${H-M.b}" y2="${H-M.b}"/><line class="ax" x1="${M.l}" x2="${M.l}" y1="${M.t}" y2="${H-M.b}"/>`;
- g+=`<text class="tk" x="${W-M.r}" y="${H-6}" text-anchor="end">x</text><text class="tk" x="12" y="${M.t+4}">y</text>`;
- g+='<g clip-path="url(#cp)">';
- if($('showMean').checked){
-  g+=`<line class="mean" x1="${sx(S.xb)}" x2="${sx(S.xb)}" y1="${M.t}" y2="${H-M.b}"/><line class="mean" x1="${M.l}" x2="${W-M.r}" y1="${sy(S.yb)}" y2="${sy(S.yb)}"/>`;
-  g+=`<text class="meanl" x="${sx(S.xb)+5}" y="${M.t+14}">${OBS} = ${f2(S.xb)}</text><text class="meanl" x="${W-M.r-6}" y="${sy(S.yb)-6}" text-anchor="end">ȳ = ${f2(S.yb)}</text>`;
- }
- if(S.ok){
-  if($('showRes').checked)g+=X.map((x,i)=>`<line class="res" x1="${sx(x)}" x2="${sx(x)}" y1="${sy(Y[i])}" y2="${sy(S.yh[i])}"/>`).join('');
-  const x0=d.xr[0],x1=d.xr[1];
-  g+=`<line class="fit" x1="${sx(x0)}" y1="${sy(S.b0+S.b1*x0)}" x2="${sx(x1)}" y2="${sy(S.b0+S.b1*x1)}"/>`;
- }
- if(sel!==null){
-  const px=sx(X[sel]),py=sy(Y[sel]),mx=sx(S.xb),my=sy(S.yb);
-  g+=`<line class="dx" x1="${mx}" x2="${px}" y1="${py}" y2="${py}"/><line class="dy" x1="${px}" x2="${px}" y1="${my}" y2="${py}"/>`;
-  g+=`<text class="dxl" x="${(mx+px)/2}" y="${py+(py>H-M.b-30?-10:20)}" text-anchor="middle">x − ${OBS} = ${neg(f2(X[sel]-S.xb))}</text>`;
-  const right=px<W-170;
-  g+=`<text class="dyl" x="${px+(right?10:-10)}" y="${(my+py)/2+4}" text-anchor="${right?'start':'end'}">y − ȳ = ${neg(f2(Y[sel]-S.yb))}</text>`;
- }
- g+='</g>';
- const r=COARSE?9.5:narrow?8:9;
- const L=X.map((x,i)=>{const px=sx(x),left=px>W-110;return{i,left,lx:px+(left?-(r+6):r+6),ly:sy(Y[i])+4.5}});
- L.slice().sort((a,b)=>a.ly-b.ly).forEach((a,k,arr)=>{for(let j=0;j<k;j++){const b=arr[j];
-  if(a.left===b.left&&Math.abs(a.lx-b.lx)<70&&a.ly-b.ly<14)a.ly=b.ly+14}});
- g+=X.map((x,i)=>`<circle class="p${i===sel?' on':''}" style="cursor:${CUR[mode]}" data-i="${i}" cx="${sx(x)}" cy="${sy(Y[i])}" r="${i===drag?.i?r+3:r}" tabindex="0" role="button" aria-label="Point ${i+1}, x ${fx(x)}, y ${f1(Y[i])}"/>`).join('');
- g+=L.map(({i,left,lx,ly})=>`<text class="lbl" x="${lx}" y="${ly}" text-anchor="${left?'end':'start'}">(${fx(X[i])}, ${f1(Y[i])})</text>`).join('');
- svg.innerHTML=g;
+// Loads data sets from text; returns false (and shows the first error) if the text has problems.
+function useText(txt, quiet) {
+  const {out, errs} = parse(txt);
+  if (errs.length) { showMsg(errs[0] + (errs.length > 1 ? ` (and ${errs.length - 1} more)` : ''), true); return false; }
+  sets = out;
+  $('demo').replaceChildren(...sets.map((d, i) => new Option(d.name, i))); // Option escapes names safely
+  load(0);
+  if (!quiet) showMsg(`Loaded ${sets.length} data set${sets.length > 1 ? 's' : ''}.`);
+  return true;
 }
 
-function render(){
- if(!DEMOS.length)return;
- const S=stats(),focusI=document.activeElement?.dataset?.i;
- draw(S);
- if(focusI!==undefined)svg.querySelector(`[data-i="${focusI}"]`)?.focus({preventScroll:true});
- $('ssr').textContent=S.ok?f3(S.ssr):'—';
- $('eq').textContent=S.ok?`ŷ = ${neg(f2(S.b0))} ${S.b1<0?'−':'+'} ${Math.abs(S.b1).toFixed(2)}x`:'Undefined: all x values are equal';
- $('r2').textContent=isNaN(S.r2)?'—':f3(S.r2);
- $('r').textContent=isNaN(S.r)?'—':neg(f3(S.r));
- $('sxy').textContent=neg(f3(S.sxy));$('sxx').textContent=f3(S.sxx);
- $('seh').textContent=isNaN(S.seH)?'—':f3(S.seH);$('ser').textContent=isNaN(S.seR)?'—':f3(S.seR);
- const vals=[...new Set(X)].sort((a,b)=>a-b);
- if(vals.length===2){
-  const grp=vals.map(v=>{const ys=Y.filter((_,i)=>X[i]===v);return{v,n:ys.length,m:ys.reduce((a,b)=>a+b,0)/ys.length}});
-  const[a,b]=grp,diff=b.m-a.m;
-  $('cond').innerHTML=`<h2>Conditional means of y</h2>`+grp.map(g=>`<div class="frac"><span class="k">Mean of y given x = ${fx(g.v)} (${g.n} point${g.n>1?'s':''})</span><b>${neg(f3(g.m))}</b></div>`).join('')+
-   `<div class="note">Difference: ${neg(f3(b.m))} − ${neg(f3(a.m))} = ${neg(f3(diff))}, which equals slope × (${fx(b.v)} − ${fx(a.v)}) = ${neg(f3(S.b1))} × ${fx(b.v-a.v)}</div>`;
-  $('cond').hidden=false;
- }else $('cond').hidden=true;
- $('b1line').textContent=S.ok?`Slope = ${neg(f3(S.sxy))} ÷ ${f3(S.sxx)} = ${neg(f3(S.b1))}`:'Slope undefined: the denominator is 0';
- $('n').textContent=S.n;$('xbar').textContent=f2(S.xb);$('ybar').textContent=f2(S.yb);$('sst').textContent=f3(S.sst);
- const v=n=>S.ok?neg(f2(n)):'—';
- if(sel===null)$('sel').innerHTML=`<h2>Selected point</h2><p class="empty">Click a point to see x − ${OB} and y − ȳ for it.</p>`;
- else{const i=sel,dx=X[i]-S.xb,dy=Y[i]-S.yb;
-  $('sel').innerHTML=`<h2>Point ${i+1}: (${fx(X[i])}, ${f1(Y[i])})</h2>
-  <div class="row"><span><i class="sw" style="background:var(--x)"></i>x − ${OB}</span><span>${neg(f2(dx))}</span></div>
-  <div class="row"><span><i class="sw" style="background:var(--y)"></i>y − ȳ</span><span>${neg(f2(dy))}</span></div>
-  <div class="row"><span>(x − ${OB})(y − ȳ)</span><span>${neg(f2(dx*dy))}</span></div>
-  <div class="row"><span>Fitted ŷ</span><span>${v(S.yh[i])}</span></div>
-  <div class="row"><span><i class="sw" style="background:var(--hot)"></i>Residual y − ŷ</span><span>${v(S.res[i])}</span></div>
-  <div class="row"><span>Squared residual</span><span>${S.ok?f3(S.res[i]**2):'—'}</span></div>`}
- $('tb').innerHTML=X.map((x,i)=>`<tr data-i="${i}" class="${i===sel?'on':''}"><td>${i+1}</td><td>${fx(x)}</td><td>${f1(Y[i])}</td><td>${neg(f2(x-S.xb))}</td><td>${neg(f2(Y[i]-S.yb))}</td><td>${neg(f2((Y[i]-S.yb)*(x-S.xb)))}</td><td>${f2((x-S.xb)**2)}</td><td>${v(S.yh[i])}</td><td>${v(S.res[i])}</td><td>${S.ok?f3(S.res[i]**2):'—'}</td></tr>`).join('');
- $('tf').innerHTML=`<tr><td>Sum</td><td></td><td></td><td>0.00</td><td>0.00</td><td>${neg(f3(S.sxy))}</td><td>${f3(S.sxx)}</td><td></td><td>${S.ok?'0.00':'—'}</td><td>${S.ok?f3(S.ssr):'—'}</td></tr>`;
+function load(i) { cur = i; X = sets[i].x.slice(); Y = sets[i].y.slice(); sel = null; render(); }
+
+/* ======================= Statistics ======================= */
+// Everything is recomputed from X and Y on every change; with n ≤ 20 this is instant.
+// Values that are undefined (e.g. slope when all x are equal) come out as NaN and print as "—".
+function stats() {
+  const n = X.length, xb = sumOf(X) / n, yb = sumOf(Y) / n;
+  const dx = X.map(x => x - xb), dy = Y.map(y => y - yb);
+  const sxx = sumOf(dx.map(v => v * v)), syy = sumOf(dy.map(v => v * v));
+  const sxy = sumOf(dx.map((v, i) => v * dy[i]));
+  const ok = sxx > 1e-12;                                   // false when every x is the same
+  const b1 = ok ? sxy / sxx : NaN, b0 = yb - b1 * xb;
+  const yh = X.map(x => b0 + b1 * x), res = Y.map((y, i) => y - yh[i]);
+  const rss = sumOf(res.map(u => u * u));
+  // Homoskedastic SE of the slope: √[ (RSS/(n−2)) / Σ(x−x̄)² ]
+  const seH = n > 2 ? Math.sqrt(rss / (n - 2) / sxx) : NaN;
+  // HC1 robust SE: √[ (1/n) · ((1/(n−2)) Σ(x−x̄)² û²) / ((1/n) Σ(x−x̄)²)² ]
+  const meat = sumOf(dx.map((v, i) => v * v * res[i] ** 2));
+  const seR = n > 2 ? Math.sqrt((1 / n) * (meat / (n - 2)) / (sxx / n) ** 2) : NaN;
+  return {n, xb, yb, dx, dy, sxx, syy, sxy, ok, b0, b1, yh, res, rss, seH, seR,
+          r2: 1 - rss / syy, r: sxy / Math.sqrt(sxx * syy)}; // both NaN if all y are equal
 }
 
-/* ---------- interaction ---------- */
-const clamp=(v,[a,b])=>Math.round(Math.min(b,Math.max(a,v))*10)/10;
-function setY(i,v){Y[i]=clamp(v,DEMOS[D].yr)}
-function setX(i,v){X[i]=clamp(v,DEMOS[D].xr)}
-const HINTS={v:'Drag a point up or down. Keyboard: Tab to a point, ↑ ↓ move it by 0.1 (hold Shift for 1), Enter selects it.',
- h:'Drag a point left or right. Keyboard: Tab to a point, ← → move it by 0.1 (hold Shift for 1), Enter selects it.',
- b:'Drag a point in any direction. Keyboard: Tab to a point, arrow keys move it by 0.1 (hold Shift for 1), Enter selects it.'};
-function setMode(m){mode=m;$('hint').textContent=HINTS[m];render()}
-document.querySelectorAll('input[name=mode]').forEach(r=>r.addEventListener('change',e=>setMode(e.target.value)));
+/* ======================= Drawing the plot ======================= */
+const M = {l: 46, r: 18, t: 18, b: 40}; // plot margins in pixels
+// Data ↔ pixel conversions for the current data set's axis ranges.
+const sx = x => { const [a, b] = sets[cur].xr; return M.l + (x - a) / (b - a) * (W - M.l - M.r); };
+const sy = y => { const [a, b] = sets[cur].yr; return H - M.b - (y - a) / (b - a) * (H - M.t - M.b); };
+const ix = px => { const [a, b] = sets[cur].xr; return a + (px - M.l) / (W - M.l - M.r) * (b - a); };
+const iy = py => { const [a, b] = sets[cur].yr; return a + (H - M.b - py) / (H - M.t - M.b) * (b - a); };
+const line = (cls, x1, y1, x2, y2) => `<line class="${cls}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
+const text = (cls, x, y, s, anchor = 'start') => `<text class="${cls}" x="${x}" y="${y}" text-anchor="${anchor}">${s}</text>`;
 
-svg.addEventListener('pointerdown',e=>{
- // Grab the nearest point within reach: about a fingertip on touch screens, smaller with a mouse.
- const rect=svg.getBoundingClientRect(),k=W/rect.width;
- const mx=(e.clientX-rect.left)*k,my=(e.clientY-rect.top)*k;
- const reach=(e.pointerType==='mouse'?16:34)*k;
- let best=-1,bd=Infinity;
- X.forEach((x,i)=>{const d=Math.hypot(sx(x)-mx,sy(Y[i])-my);if(d<bd){bd=d;best=i}});
- if(best<0||bd>reach)return;
- e.preventDefault();
- drag={i:best,x0:e.clientX,y0:e.clientY,moved:false,id:e.pointerId};
- try{svg.setPointerCapture(e.pointerId)}catch(_){}
- render();
+// Tick values at a step of 1, 2 or 5 × a power of ten, about `max` ticks across [a, b].
+function ticks(a, b, max) {
+  const raw = (b - a) / max, p = 10 ** Math.floor(Math.log10(raw));
+  const step = [1, 2, 5, 10].map(m => m * p).find(s => s >= raw), out = [];
+  for (let v = Math.ceil(a / step) * step; v <= b + 1e-9; v += step) out.push(+v.toFixed(6));
+  return out;
+}
+
+function draw(S) {
+  W = fig.clientWidth; H = fig.clientHeight;
+  if (!W || !H) return;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  const d = sets[cur], narrow = W < 520, top = M.t, bot = H - M.b, lft = M.l, rgt = W - M.r;
+  let g = `<defs><clipPath id="clip"><rect x="${lft}" y="${top}" width="${rgt - lft}" height="${bot - top}"/></clipPath></defs>`;
+
+  // Grid, ticks and axes
+  for (const v of ticks(...d.xr, narrow ? 5 : 10)) g += line('gl', sx(v), top, sx(v), bot) + text('tk', sx(v), bot + 18, v, 'middle');
+  for (const v of ticks(...d.yr, narrow ? 5 : 8)) g += line('gl', lft, sy(v), rgt, sy(v)) + text('tk', lft - 8, sy(v) + 4, v, 'end');
+  g += line('ax', lft, bot, rgt, bot) + line('ax', lft, top, lft, bot);
+  g += text('tk', rgt, H - 6, 'x', 'end') + text('tk', 12, top + 4, 'y');
+
+  // Everything inside the plot area is clipped so long lines stop at the axes.
+  g += '<g clip-path="url(#clip)">';
+  if ($('showMean').checked) {
+    g += line('mean', sx(S.xb), top, sx(S.xb), bot) + line('mean', lft, sy(S.yb), rgt, sy(S.yb));
+    g += text('meanl', sx(S.xb) + 5, top + 14, `${XBAR_SVG} = ${fmt(S.xb, 2)}`);
+    g += text('meanl', rgt - 6, sy(S.yb) - 6, `ȳ = ${fmt(S.yb, 2)}`, 'end');
+  }
+  if (S.ok) {
+    if ($('showRes').checked) X.forEach((x, i) => { g += line('res', sx(x), sy(Y[i]), sx(x), sy(S.yh[i])); });
+    const [x0, x1] = d.xr;
+    g += line('fit', sx(x0), sy(S.b0 + S.b1 * x0), sx(x1), sy(S.b0 + S.b1 * x1));
+  }
+  if (sel !== null) { // deviation segments for the selected point
+    const px = sx(X[sel]), py = sy(Y[sel]), mx = sx(S.xb), my = sy(S.yb), right = px < W - 170;
+    g += line('dx', mx, py, px, py) + line('dy', px, my, px, py);
+    g += text('dxl', (mx + px) / 2, py + (py > bot - 30 ? -10 : 20), `x − ${XBAR_SVG} = ${fmt(S.dx[sel], 2)}`, 'middle'); // above the segment if near the x axis
+    g += text('dyl', px + (right ? 10 : -10), (my + py) / 2 + 4, `y − ȳ = ${fmt(S.dy[sel], 2)}`, right ? 'start' : 'end');
+  }
+  g += '</g>';
+
+  // Points, then their "(x, y)" labels on top.
+  const r = TOUCH ? 9.5 : narrow ? 8 : 9;
+  X.forEach((x, i) => {
+    g += `<circle class="p${i === sel ? ' on' : ''}" style="cursor:${CURSOR[mode]}" data-i="${i}" cx="${sx(x)}" cy="${sy(Y[i])}"`
+       + ` r="${drag && drag.i === i ? r + 3 : r}" tabindex="0" role="button" aria-label="Point ${i + 1}, x ${fx(x)}, y ${fmt(Y[i], 1)}"/>`;
+  });
+  // Labels sit beside their point (on the left near the right edge). Going top to bottom,
+  // a label that would overlap one above it on the same side is nudged down.
+  const labels = X.map((x, i) => {
+    const left = sx(x) > W - 110;
+    return {i, left, x: sx(x) + (left ? -1 : 1) * (r + 6), y: sy(Y[i]) + 4.5};
+  }).sort((a, b) => a.y - b.y);
+  labels.forEach((a, k) => {
+    for (const b of labels.slice(0, k)) if (a.left === b.left && Math.abs(a.x - b.x) < 70 && a.y - b.y < 14) a.y = b.y + 14;
+    g += text('lbl', a.x, a.y, `(${fx(X[a.i])}, ${fmt(Y[a.i], 1)})`, a.left ? 'end' : 'start');
+  });
+
+  // Redrawing replaces the circles, so put keyboard focus back on the same point.
+  const focused = svg.contains(document.activeElement) ? document.activeElement.dataset.i : null;
+  svg.innerHTML = g;
+  if (focused != null) svg.querySelector(`[data-i="${focused}"]`)?.focus({preventScroll: true});
+}
+
+/* ======================= Statistics panel and table ======================= */
+function render() {
+  if (!sets.length) return;
+  const S = stats(), f2 = v => fmt(v, 2), f3 = v => fmt(v, 3);
+  draw(S);
+
+  const set = (id, v) => { $(id).textContent = v; };
+  set('eq', S.ok ? `ŷ = ${f2(S.b0)} ${S.b1 < 0 ? '−' : '+'} ${fmt(Math.abs(S.b1), 2)}x` : 'Undefined (all x equal)');
+  set('n', S.n);
+  set('sxy', f3(S.sxy)); set('sxx', f3(S.sxx));
+  set('b1line', S.ok ? `Slope = ${f3(S.sxy)} ÷ ${f3(S.sxx)} = ${f3(S.b1)}` : 'Slope undefined: the denominator is 0');
+  set('seh', f3(S.seH)); set('ser', f3(S.seR));
+  set('xbar', f2(S.xb)); set('ybar', f2(S.yb)); set('r2', f3(S.r2)); set('r', f3(S.r));
+  set('rss', f3(S.rss)); set('tss', f3(S.syy));
+
+  // Conditional means: only when x takes exactly two distinct values.
+  const vals = [...new Set(X)].sort((a, b) => a - b), cond = $('cond');
+  cond.hidden = vals.length !== 2;
+  if (!cond.hidden) {
+    const [a, b] = vals.map(v => { const ys = Y.filter((_, i) => X[i] === v); return {v, n: ys.length, m: sumOf(ys) / ys.length}; });
+    cond.innerHTML = '<h2>Conditional means of y</h2>'
+      + [a, b].map(g => `<div class="row"><span class="k">Mean of y given x = ${fx(g.v)} (${g.n} point${g.n > 1 ? 's' : ''})</span><b class="num">${f3(g.m)}</b></div>`).join('')
+      + `<div class="note">Difference: ${f3(b.m)} − ${f3(a.m)} = ${f3(b.m - a.m)}, which equals slope × (${fx(b.v)} − ${fx(a.v)}) = ${f3(S.b1)} × ${fx(b.v - a.v)}</div>`;
+  }
+
+  // Selected point details
+  const row = (label, v, colour) => `<div class="row"><span>${colour ? `<i class="sw" style="background:var(${colour})"></i>` : ''}${label}</span><b class="num">${v}</b></div>`;
+  $('sel').innerHTML = sel === null
+    ? `<h2>Selected point</h2><p class="note" style="margin:0">Click a point to see x − ${XBAR_HTML} and y − ȳ for it.</p>`
+    : `<h2>Point ${sel + 1}: (${fx(X[sel])}, ${fmt(Y[sel], 1)})</h2>`
+      + row(`x − ${XBAR_HTML}`, f2(S.dx[sel]), '--x') + row('y − ȳ', f2(S.dy[sel]), '--y')
+      + row(`(x − ${XBAR_HTML})(y − ȳ)`, f2(S.dx[sel] * S.dy[sel])) + row('Fitted ŷ', f2(S.yh[sel]))
+      + row('Residual y − ŷ', f2(S.res[sel]), '--hot') + row('Squared residual', f3(S.res[sel] ** 2));
+
+  // Table: one row per point, then column sums (the deviation and residual sums are always 0).
+  const cells = a => a.map(v => `<td>${v}</td>`).join('');
+  $('tb').innerHTML = X.map((x, i) => `<tr data-i="${i}"${i === sel ? ' class="on"' : ''}>` + cells([i + 1, fx(x), fmt(Y[i], 1),
+    f2(S.dx[i]), f2(S.dy[i]), f2(S.dx[i] * S.dy[i]), f2(S.dx[i] ** 2), f2(S.yh[i]), f2(S.res[i]), f3(S.res[i] ** 2)]) + '</tr>').join('');
+  $('tf').innerHTML = '<tr>' + cells(['Sum', '', '', f2(sumOf(S.dx)), f2(sumOf(S.dy)), f3(S.sxy), f3(S.sxx), '', f2(sumOf(S.res)), f3(S.rss)]) + '</tr>';
+}
+
+// Dragging can fire many events per frame; redraw at most once per frame.
+let queued = false;
+const renderSoon = () => { if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; render(); }); } };
+
+/* ======================= Interaction ======================= */
+// Moved values snap to 0.1 and stay inside the axis range.
+const snap = (v, [a, b]) => Math.round(Math.min(b, Math.max(a, v)) * 10) / 10;
+const setX = (i, v) => { X[i] = snap(v, sets[cur].xr); };
+const setY = (i, v) => { Y[i] = snap(v, sets[cur].yr); };
+const toggle = i => { sel = sel === i ? null : i; render(); };
+// Pointer position in plot pixels (the SVG's viewBox matches its on-screen size).
+const plotXY = e => { const b = svg.getBoundingClientRect(); return [e.clientX - b.left, e.clientY - b.top]; };
+
+// Pressing grabs the nearest point within reach: a fingertip (34px) on touch, 16px with a mouse.
+svg.addEventListener('pointerdown', e => {
+  if (e.button > 0) return; // ignore right and middle clicks
+  const [mx, my] = plotXY(e), reach = e.pointerType === 'mouse' ? 16 : 34;
+  let best = -1, bestD = reach;
+  X.forEach((x, i) => { const dist = Math.hypot(sx(x) - mx, sy(Y[i]) - my); if (dist <= bestD) { bestD = dist; best = i; } });
+  if (best < 0) return;
+  e.preventDefault();
+  drag = {i: best, id: e.pointerId, x0: e.clientX, y0: e.clientY, moved: false};
+  try { svg.setPointerCapture(e.pointerId); } catch (_) { /* not essential: moves are also heard on window */ }
+  render();
 });
-svg.addEventListener('pointermove',e=>{
- if(!drag||e.pointerId!==drag.id)return;
- if(Math.hypot(e.clientX-drag.x0,e.clientY-drag.y0)>3)drag.moved=true;
- if(!drag.moved)return;
- const rect=svg.getBoundingClientRect();
- if(mode!=='h')setY(drag.i,iy((e.clientY-rect.top)*(H/rect.height)));
- if(mode!=='v')setX(drag.i,ix((e.clientX-rect.left)*(W/rect.width)));
- render();
+// Move and release are heard on window, so a drag still ends if the pointer leaves the plot.
+addEventListener('pointermove', e => {
+  if (!drag || e.pointerId !== drag.id) return;
+  if (!drag.moved && Math.hypot(e.clientX - drag.x0, e.clientY - drag.y0) <= 3) return; // a tap, not a drag (yet)
+  drag.moved = true;
+  const [mx, my] = plotXY(e);
+  if (mode !== 'h') setY(drag.i, iy(my));
+  if (mode !== 'v') setX(drag.i, ix(mx));
+  renderSoon();
 });
-const end=()=>{if(!drag)return;const{i,moved}=drag;drag=null;if(!moved)sel=sel===i?null:i;render()};
-svg.addEventListener('pointerup',end);svg.addEventListener('pointercancel',end);
+const endDrag = e => {
+  if (!drag || e.pointerId !== drag.id) return;
+  const {i, moved} = drag;
+  drag = null;
+  moved ? render() : toggle(i); // a press without movement selects the point
+};
+addEventListener('pointerup', endDrag);
+addEventListener('pointercancel', endDrag);
 
-svg.addEventListener('keydown',e=>{
- const t=e.target.closest('.p');if(!t)return;const i=+t.dataset.i,s=e.shiftKey?1:0.1;
- const vy={ArrowUp:1,ArrowDown:-1}[e.key],vx={ArrowRight:1,ArrowLeft:-1}[e.key];
- if(vy&&mode!=='h'){setY(i,Y[i]+vy*s);e.preventDefault();render()}
- else if(vx&&mode!=='v'){setX(i,X[i]+vx*s);e.preventDefault();render()}
- else if(e.key==='Enter'||e.key===' '){sel=sel===i?null:i;e.preventDefault();render()}
+svg.addEventListener('keydown', e => {
+  const i = e.target.dataset?.i == null ? null : +e.target.dataset.i;
+  if (i === null) return;
+  const step = e.shiftKey ? 1 : 0.1;
+  const dy = {ArrowUp: 1, ArrowDown: -1}[e.key], dx = {ArrowRight: 1, ArrowLeft: -1}[e.key];
+  if (dy && mode !== 'h') setY(i, Y[i] + dy * step);
+  else if (dx && mode !== 'v') setX(i, X[i] + dx * step);
+  else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(i); return; }
+  else return;
+  e.preventDefault();
+  render();
 });
 
-$('tb').addEventListener('click',e=>{const tr=e.target.closest('tr');if(!tr)return;const i=+tr.dataset.i;sel=sel===i?null:i;render()});
-$('demo').addEventListener('change',e=>load(+e.target.value));
-$('reset').addEventListener('click',()=>{const keep=sel;load(D);sel=keep;render()});
-$('showRes').addEventListener('change',render);$('showMean').addEventListener('change',render);
+$('tb').addEventListener('click', e => { const tr = e.target.closest('tr'); if (tr) toggle(+tr.dataset.i); });
+$('demo').addEventListener('change', e => load(+e.target.value));
+$('reset').addEventListener('click', () => { const keep = sel; load(cur); sel = keep; render(); });
+$('showRes').addEventListener('change', render);
+$('showMean').addEventListener('change', render);
+for (const r of document.querySelectorAll('input[name=mode]'))
+  r.addEventListener('change', () => { mode = r.value; $('hint').textContent = HINTS[mode]; render(); });
 
-/* ---------- data set editor ---------- */
-$('apply').addEventListener('click',()=>{const t=$('dtxt').value;if(useText(t)){try{localStorage.setItem(KEY,t)}catch(_){}}});
-$('restore').addEventListener('click',()=>{$('dtxt').value=BUILTIN;useText(BUILTIN);try{localStorage.removeItem(KEY)}catch(_){}});
-$('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('dtxt').value);$('msg').className='msg';$('msg').textContent='Copied.'}
- catch(_){$('dtxt').select();$('msg').className='msg';$('msg').textContent='Text selected. Press Ctrl+C or ⌘C to copy.'}});
+/* ======================= Data set editor ======================= */
+// Storage can be unavailable (private browsing, some embedded viewers), so every use is guarded.
+const store = {
+  get() { try { return localStorage.getItem(STORE_KEY); } catch (_) { return null; } },
+  set(v) { try { v == null ? localStorage.removeItem(STORE_KEY) : localStorage.setItem(STORE_KEY, v); } catch (_) {} }
+};
+$('apply').addEventListener('click', () => { const t = $('dtxt').value; if (useText(t)) store.set(t); });
+$('restore').addEventListener('click', () => { $('dtxt').value = BUILTIN; useText(BUILTIN); store.set(null); });
+$('copy').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText($('dtxt').value); showMsg('Copied.'); }
+  catch (_) { $('dtxt').select(); showMsg('Text selected. Press Ctrl+C or ⌘C to copy.'); }
+});
 
-let saved=null;try{saved=localStorage.getItem(KEY)}catch(_){}
-$('dtxt').value=saved||BUILTIN;
-if(!(saved&&useText(saved,true))){$('dtxt').value=BUILTIN;useText(BUILTIN,true)}
-$('hint').textContent=HINTS[mode];
-
-const ro=new ResizeObserver(()=>render());ro.observe(fig);
+/* ======================= Start ======================= */
+const saved = store.get();
+$('dtxt').value = saved || BUILTIN;
+if (!saved || !useText(saved, true)) useText(BUILTIN, true); // fall back if saved text no longer parses
+$('hint').textContent = HINTS[mode];
+new ResizeObserver(() => render()).observe(fig);
 }
 </script>
 </body>
