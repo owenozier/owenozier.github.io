@@ -7,8 +7,13 @@ redirect_from:
   - /resume
 ---
 <!--- 2026 --->
+## Lowest Unique Positive Integer
+[Lowest Unique Positive Integer game]([https://owenozier.github.io/files/resource/econometrics/regression-demo-1.html](https://script.google.com/macros/s/AKfycbzuEKY31VzRGJ8If9TmRgQB-MfZLvGoXcQkvG1UgaapcNnXFoi5VjIJlL1l9Y4PwskDaA/exec)
+
+<!--- 2026 --->
 ## Econometrics visualization
 [Visualizing regression demo 1](https://owenozier.github.io/files/resource/econometrics/regression-demo-1.html)
+
 
 <!--- 2023 --->
 ## Regression table
